@@ -1210,21 +1210,21 @@
       "pigeon": "비둘기", "poop": "똥", "can": "할 수 있다", "cure": "치료하다",
       "virus": "바이러스", "threw": "던졌다", "stinky": "지독하게 냄새나는", "sock": "양말",
       "exploded": "폭발했다", "wiped": "전멸시켰다 (wipe out)", "out": "밖으로/완전히",
-      "king": "왕", "emperor": "황제", "gave": "주었다", "no": "아무도 ~않다", "one": "사람",
+      "king": "왕", "emperor": "황제", "gave": "주었다", "no": "아무도 ~않다", "one": "하나의 (no one: 아무도)",
       "expected": "예상했다", "golden": "황금", "toilet": "변기/화장실", "brush": "솔/브러시",
       "slapped": "뺨을 때렸다", "snobby": "건방진", "duke": "공작", "wearing": "입고 있는",
       "pink": "분홍색", "hello": "안녕", "kitty": "키티", "underwear": "팬티/속옷",
-      "drank": "마셨다", "magic": "마법의", "potion": "물약", "turns": "바꾸다",
+      "drank": "마셨다", "magic": "마법의", "potion": "물약", "turns": "바꾸다 / ~이 되다",
       "sweat": "땀", "into": "~으로", "strawberry": "딸기", "milk": "우유", "bald": "대머리의",
       "ghost": "귀신", "lives": "살다", "begged": "구걸했다", "hair": "머리카락",
       "growth": "성장/발모", "shampoo": "샴푸", "met": "만났다", "skeleton": "해골",
-      "ribs": "갈비뼈", "made": "만들어진", "shiny": "빛나는", "glow": "야광의",
+      "ribs": "갈비뼈", "made": "만들었다 / 만들어진", "shiny": "빛나는", "glow": "야광의",
       "sticks": "막대기들(야광봉)", "ate": "먹었다", "cursed": "저주받은", "chalk": "분필",
       "makes": "만들다", "you": "너를", "rap": "랩하다", "eminem": "에미넴", "during": "~동안",
-      "math": "수학", "class": "수업", "crazy": "미친", "alien": "외계인", "conquered": "정복했다",
+      "math": "수학", "class": "수업", "alien": "외계인", "conquered": "정복했다",
       "galaxy": "은하계", "single": "단 하나의", "green": "녹색", "onion": "양파 (파: green onion)",
       "stole": "훔쳤다", "ufo": "미확인 비행물체", "uses": "사용하다", "farts": "방귀",
-      "as": "~로써", "hyper-speed": "초고속", "fuel": "연료", "punched": "주먹으로 쳤다",
+      "as": "~만큼 / ~로(서)", "hyper-speed": "초고속", "fuel": "연료", "punched": "주먹으로 쳤다",
       "space": "우주", "monster": "괴물", "face": "얼굴", "looks": "보이다", "squished": "짓눌린",
       "potato": "감자", "proved": "증명했다", "real": "진짜", "talent": "재능/특기",
       "breaking": "부수기/깨기", "watermelons": "수박들",
@@ -1237,252 +1237,2102 @@
       "years": "년(해)", "wrote": "썼다", "down": "아래로 (write down: 받아 적다)", "said": "말했다"
     };
 
+    Object.assign(WORD_DICTIONARY, {"about": "~에 관한", "above": "~위에", "adopted": "입양했다", "afraid": "무서워하는", "after": "~을 따라 (name after: ~의 이름을 따서)", "against": "~에 맞서", "agency": "소속사", "all": "모든 / 모두", "always": "항상", "anchor": "(뉴스) 앵커", "arm": "팔", "arms": "팔들", "arrived": "도착했다", "asleep": "잠든", "astronaut": "우주 비행사", "award": "상", "backwards": "뒤로", "ball": "무도회", "banner": "현수막", "battle": "배틀/대결", "beat": "비트(박자)", "became": "~이 되었다", "believe": "믿다", "belly": "배", "bend": "구부러지다", "best": "가장 친한 / 최고의", "big": "큰", "borrowed": "빌려 갔다", "box": "상자", "boy": "남자아이", "brave": "용감한", "breath": "입김/숨", "bridge": "(우주선) 조종실", "brings": "가져오다", "bucket": "통/양동이", "buffet": "뷔페", "built": "만들었다/쌓았다", "bus": "버스", "butterflies": "나비들", "button": "단추 (belly button: 배꼽)", "buttons": "버튼들", "cafeteria": "급식실", "cake": "케이크", "called": "전화했다", "came": "왔다/들려왔다", "can't": "~할 수 없다", "candy": "사탕", "captain": "선장", "carries": "가지고 다니다", "carrot": "당근", "case": "통 (pencil case: 필통)", "cat": "고양이", "cats": "고양이들", "caught": "붙잡았다", "changes": "바꾸다", "channel": "채널", "chased": "쫓아갔다", "cheered": "응원했다", "chicken": "닭/치킨", "city": "도시", "classroom": "교실", "closet": "옷장", "clouds": "구름들", "coffee": "커피", "cola": "콜라", "color": "색깔", "concert": "콘서트", "cook": "조리사/요리사", "cookies": "쿠키들", "cooking": "요리", "copied": "따라 했다", "copies": "베끼다", "costumes": "의상들", "could": "~할 수 있었다", "couldn't": "~할 수 없었다", "covered": "뒤덮인", "cow": "소", "cries": "울다", "crown": "왕관", "cry": "울다", "crying": "울고 있는", "curry": "카레", "cut": "끼어들었다 (cut in line: 새치기하다)", "dance": "춤/춤추다", "danced": "춤췄다", "dancer": "댄서", "dancing": "춤추고 있는", "dark": "어둠", "debuted": "데뷔했다", "defeat": "물리치다", "diary": "일기장", "dictionary": "사전", "did": "했다", "didn't": "~하지 않았다", "do": "하다", "dog": "강아지/개", "doing": "하는 중", "door": "문", "dragon": "용", "drama": "드라마", "drops": "떨어지다 (beat drops: 비트가 터지다)", "ducks": "오리들", "ears": "귀", "eats": "먹다", "else": "그 밖의", "empress": "황후", "empty": "텅 빈", "erasers": "지우개들", "ever": "지금까지 한 번이라도", "every": "모든 / ~마다", "everyone": "모든 사람", "everything": "모든 것", "everywhere": "어디든", "exactly": "정확히/똑같이", "fall": "(잠에) 들다", "famous": "유명한", "fan": "팬", "farmer": "농부", "favorite": "가장 좋아하는", "field": "경기장", "fighting": "싸우고 있는", "finally": "마침내", "first": "최초의/첫 번째", "five": "5, 다섯", "floats": "떠 있다", "floor": "바닥/무대", "fly": "파리 / 날다", "follow": "따라다니다", "followed": "따라갔다", "food": "음식", "forbidden": "금지된", "found": "발견했다/찾았다", "french": "프랑스어", "fried": "튀긴", "friend": "친구", "friends": "친구들", "frog": "개구리", "full": "가득 찬", "funny": "웃긴", "giant": "거대한", "gift": "선물", "girl": "여자아이", "glasses": "안경", "got": "얻었다", "grabbed": "움켜쥐었다", "grandma": "할머니", "gum": "껌", "hamster": "햄스터", "hamsters": "햄스터들", "handstand": "물구나무서기", "happy": "기분 좋은", "has": "가지고 있다 / ~해 왔다", "hates": "싫어하다", "heard": "들었다", "heart": "마음 (by heart: 외워서)", "hides": "숨기다", "hiding": "숨어 있는", "high-fived": "하이파이브했다", "hip-hop": "힙합", "hit": "히트(인기 있는)", "homework": "숙제", "hour": "시간", "hug": "포옹", "human": "인간", "hunter": "사냥꾼", "idol": "아이돌", "interviewed": "인터뷰했다", "invented": "발명했다", "invited": "초대했다", "island": "섬", "jacket": "재킷", "janitor": "관리인", "jar": "병/통", "jelly": "젤리", "judge": "심사위원", "juice": "주스", "k-pop": "케이팝", "key": "열쇠", "kimbap": "김밥", "kimchi": "김치", "kingdom": "왕국", "knight": "기사", "knows": "알다", "lab": "실험실", "landed": "착륙했다", "last": "마지막의 / 맨 뒤의", "laugh": "웃다", "left": "남겨 두었다 / 남은", "leg": "다리", "letter": "편지", "library": "도서관", "lights": "불이 들어오다", "line": "줄", "live": "생방송의", "long": "긴", "looked": "~처럼 보였다", "loudest": "가장 시끄러운", "lunch": "점심", "lying": "놓여 있는", "machine": "기계 (vending machine: 자판기)", "maid": "하녀", "make": "만들다", "man": "남자", "manager": "매니저", "map": "지도", "message": "메시지", "microphone": "마이크", "minister": "대신(장관)", "minute": "분", "mirror": "거울", "moon": "달", "more": "더 많은", "most": "가장", "movie": "영화", "music": "음악", "named": "이름을 붙였다", "never": "결코 ~않다", "new": "새로운", "news": "뉴스", "next": "옆의 (next door: 옆집)", "night": "밤", "noodles": "국수", "not": "~아니다", "old": "낡은/오래된", "opened": "열었다", "opens": "열다/열리다", "palace": "궁전", "pan": "팬 (frying pan: 프라이팬)", "party": "파티", "pencil": "연필", "perfect": "완벽한/만점의", "perfume": "향수", "picked": "집었다 (pick up: 줍다/태워 가다)", "pillow": "베개", "pilot": "조종사", "pizza": "피자", "planet": "행성", "planets": "행성들", "plays": "연주하다/(음악이) 나오다", "please": "제발/~해 주세요", "poems": "시들", "polite": "예의 바른", "prince": "왕자", "princess": "공주", "principal": "교장 선생님", "protects": "지키다", "puppy": "강아지", "put": "넣었다", "queen": "여왕", "queen's": "여왕의", "rain": "비", "ramen": "라면", "really": "정말로", "refrigerator": "냉장고", "requested": "신청했다", "rescued": "구했다", "restroom": "화장실", "retriever": "리트리버(개 품종)", "rivers": "강들", "rocket": "로켓", "rockets": "로켓들", "rode": "탔다", "rolls": "줄(김밥)", "room": "방/실", "roses": "장미", "royal": "왕실의", "rubber": "고무", "runs": "움직이다/작동하다", "sad": "슬픈", "sang": "불렀다", "saved": "구했다", "saw": "보았다", "scared": "무서워하는 / 겁먹게 했다", "scariest": "가장 무서운", "school": "학교", "scientist": "과학자", "scolded": "혼냈다", "score": "점수", "seat": "자리", "secret": "비밀의", "sells": "팔다", "send": "보내다", "sent": "보냈다", "serves": "제공하다", "shadow": "그림자", "shared": "나눠 주었다", "shelter": "대피소", "shoes": "신발", "show": "쇼/방송", "singer": "가수", "sings": "노래하다", "sits": "앉다", "sleeps": "자다", "sleepy": "졸린", "smelled": "~냄새가 났다", "smells": "~냄새가 나다", "snack": "간식", "sneeze": "재채기", "soccer": "축구", "sold": "팔았다", "song": "노래", "songs": "노래들", "soup": "수프/국", "spaceship": "우주선", "spoon": "숟가락", "squeak": "삑삑 소리가 나다", "stage": "무대", "staircase": "계단", "star": "별/스타", "stars": "별들", "statue": "동상", "steps": "계단(칸)", "stops": "멈추다", "stuck": "갇힌", "studio": "녹음실", "style": "스타일/방식", "table": "탁자/식탁", "tail": "꼬리", "talked": "이야기했다", "teacher": "선생님", "team": "팀", "telescope": "망원경", "ten": "10, 열", "test": "시험", "textbooks": "교과서들", "than": "~보다", "thanked": "감사 인사를 했다", "thicker": "더 두꺼운", "thinking": "생각하는 중", "this": "이것", "through": "~을 통해", "tickled": "간지럽혔다", "tiny": "아주 작은", "took": "가져갔다", "touches": "손대다", "trained": "연습했다", "trainee": "연습생", "tray": "식판", "treasure": "보물", "trot": "트로트", "under": "~아래에", "unicorn": "유니콘", "up": "위로 (pick up: 줍다)", "used": "사용했다", "vegetables": "채소들", "vending": "판매 (vending machine: 자판기)", "visited": "방문했다", "voice": "목소리", "wagging": "(꼬리를) 흔드는", "walks": "걷다", "wall": "벽", "walls": "벽들", "want": "원하다", "wanted": "원했다", "wants": "원하다", "watching": "보고 있는", "way": "길", "wear": "입다", "when": "~할 때", "whispered": "속삭였다", "whole": "전체의/통째의", "won": "이겼다/탔다(상)", "wore": "입었다/썼다", "work": "작동하다", "youngest": "가장 어린", "zombie-free": "좀비가 없는", "wild": "거친", "alarm": "경보기 (fire alarm: 화재경보기)", "answers": "답", "attack": "습격", "attacks": "공격하다", "awake": "깨어 있는", "away": "멀리 (run away: 도망치다)", "back": "뒤 (back of her head: 뒤통수)", "battery": "배터리", "because": "~때문에", "belt": "띠 (black belt: 검은 띠)", "birthday": "생일", "black": "검은", "boring": "지루한", "brains": "뇌", "busan": "부산", "call": "부르다 (call 119: 119에 전화하다)", "calls": "부르다", "card": "카드 (report card: 성적표)", "carsick": "차멀미하는", "castle": "성", "charger": "충전기", "checks": "검사하다", "classmate": "반 친구", "cold": "차가운/시원한", "dropped": "떨어뜨렸다", "earth": "지구", "fire": "불 (fire alarm: 화재경보기)", "fish": "생선 (fish cake: 어묵)", "flew": "날아갔다", "friday": "금요일", "gets": "~하게 되다 (get carsick: 멀미하다)", "gold": "금", "gym": "체육관 (gym shoes: 운동화)", "hard": "세게", "have": "가지고 있다", "high": "높은", "hired": "고용했다", "holiday": "휴일", "howling": "(개가) 울부짖는", "inside": "~안에", "instead": "대신에 (instead of: ~대신)", "job": "일/직업", "keep": "유지하다", "level": "단계", "locked": "잠갔다", "low": "부족한/낮은", "meatball": "미트볼", "menu": "메뉴", "million": "백만", "monday": "월요일", "morning": "아침/새벽 (2 in the morning: 새벽 2시)", "off": "(경보가) 울리다 (go off)", "office": "사무실 (principal's office: 교장실)", "official": "공식의", "password": "비밀번호", "penguin": "펭귄", "people": "사람들", "phone": "휴대폰", "pop": "깜짝 (pop quiz: 쪽지 시험)", "posted": "올렸다", "posts": "올리다", "principal's": "교장 선생님의", "question": "문제/질문", "quiz": "시험/퀴즈", "racing": "경주하는", "ran": "달렸다 (ran away: 도망쳤다)", "report": "보고 (report card: 성적표)", "rice": "밥/밥알", "ringtone": "벨소리", "rock-paper-scissors": "가위바위보", "rolled": "굴러갔다", "rolling": "말기 (kimbap rolling: 김밥 말기)", "row": "줄 (in a row: 연속으로)", "school's": "학교의", "secretly": "몰래", "selfie": "셀카", "sign": "표지판", "slower": "더 느리게", "smell": "냄새", "snail": "달팽이", "sneezed": "재채기했다", "snoring": "코 골기", "so": "너무 (so ~ that: 너무 ~해서)", "spice": "매운맛", "sprays": "뿌리다", "started": "시작했다", "still": "아직도", "stopped": "멈췄다", "story": "이야기 (ghost story: 괴담)", "studies": "공부하다", "subscribers": "구독자들", "survived": "살아남았다", "taller": "더 높은", "tastes": "~맛이 나다", "tea": "차", "teacher's": "선생님의", "time": "시간 (the whole time: 내내)", "times": "번 (100 times: 100번)", "today's": "오늘의", "tomorrow's": "내일의", "until": "~까지", "upstairs": "위층에", "us": "우리에게", "walked": "걸었다", "weakness": "약점", "wednesday": "수요일", "went": "(경보가) 울렸다 (go off)", "wi-fi": "와이파이", "year's": "(작년의) last year's", "youtube": "유튜브", "zero": "0개의, 하나도 없는"});
+
     /* ========================================================
-       3. 예문 테마 데이터베이스 (img: AI 그림 프롬프트, scene: 그림 대체 이모지)
+       3. 예문 테마 데이터베이스 (테마당 20개) (img: AI 그림 프롬프트, scene: 그림 대체 이모지)
        ======================================================== */
     const THEMES = [
       {
-        id: 'lunch', name: '1분컷 급식실', flavor: '민트초코 떡볶이맛', icon: '🍱', color: '#ff7a00',
-        templates: [
+        "id": "lunch",
+        "name": "1분컷 급식실",
+        "flavor": "민트초코 떡볶이맛",
+        "icon": "🍱",
+        "color": "#ff7a00",
+        "templates": [
           {
-            eng: "{NAME} is the legendary student [who] mixed mint chocolate with spicy tteokbokki.",
-            kor: "{NAME}은(는) 민트 초코와 매운 떡볶이를 섞은 전설의 학생이다.",
-            tip: "👉 선행사 'the legendary student'(사람) 뒤에 주어 역할을 하는 <b>who</b>를 씁니다! (진정한 미식가네요)",
-            img: "a proud middle school student mixing mint chocolate ice cream into a bowl of spicy red tteokbokki rice cakes in a school cafeteria",
-            scene: "🍫🌶️🥢",
-            quiz: {
-              sentence: "{NAME} swallowed a flying sausage ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) bounces like a superball.",
-              options: ["who", "which", "whose"], answerIndex: 1,
-              explanation: "선행사 'a flying sausage'(사물)가 탱탱볼처럼 튀어 오르므로 <b>which</b>가 정답입니다!"
+            "eng": "{NAME} is the legendary student [who] mixed mint chocolate with spicy tteokbokki.",
+            "kor": "{NAME}은(는) 민트 초코와 매운 떡볶이를 섞은 전설의 학생이다.",
+            "tip": "👉 선행사 'the legendary student'(사람) 뒤에 주어 역할을 하는 <b>who</b>를 씁니다! (진정한 미식가네요)",
+            "img": "a proud middle school student mixing mint chocolate ice cream into a bowl of spicy red tteokbokki rice cakes in a school cafeteria",
+            "scene": "🍫🌶️🥢",
+            "quiz": {
+              "sentence": "The student ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) eats the fastest has never seen a vegetable up close.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The student'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "{NAME} swallowed a flying sausage [which] bounces like a superball.",
-            kor: "{NAME}은(는) 탱탱볼처럼 튀어 오르는 날아다니는 소시지를 꿀꺽 삼켰다.",
-            tip: "👉 선행사 'a flying sausage'(사물)를 설명하는 주격 관계대명사 <b>which</b>!",
-            img: "a surprised student swallowing a flying sausage that bounces like a rubber superball in a school cafeteria",
-            scene: "🌭💨🏀",
-            quiz: {
-              sentence: "{NAME} fought a robot chef ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) laser eyes fry pork cutlets in a second.",
-              options: ["who", "which", "whose"], answerIndex: 2,
-              explanation: "로봇 요리사'의(whose)' 레이저 눈! 소유를 나타내므로 <b>whose</b>가 정답입니다!"
+            "eng": "The cook [who] runs our cafeteria has a black belt in kimbap rolling.",
+            "kor": "우리 급식실을 책임지는 조리사님은 김밥 말기 검은 띠다.",
+            "tip": "👉 주어 'The cook'(사람)을 꾸미는 <b>who</b>! 진짜 동사는 has예요.",
+            "img": "a cool school cook wearing a black belt rolling kimbap at lightning speed like a martial artist",
+            "scene": "🥋🍙⚡",
+            "quiz": {
+              "sentence": "The boy ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) skipped breakfast heard his stomach sing the national anthem.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The boy'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "{NAME} fought a robot chef [whose] laser eyes fry 500 pork cutlets in a second.",
-            kor: "{NAME}은(는) 레이저 눈으로 1초 만에 500개의 돈가스를 튀기는 로봇 요리사와 싸웠다.",
-            tip: "👉 로봇 요리사의(whose) 레이저 눈! 뒤에 명사(laser eyes)가 오므로 소유격 <b>whose</b>를 씁니다.",
-            img: "a brave student battling a robot chef whose laser eyes instantly fry hundreds of pork cutlets in a school kitchen",
-            scene: "🤖👀🍖",
-            quiz: {
-              sentence: "The principal ate ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} mixed with mint chocolate.",
-              options: ["what", "who", "which"], answerIndex: 0,
-              explanation: "앞에 수식할 선행사가 없고 '{NAME}이 민초와 섞은 것'이라는 뜻이므로 <b>what</b>이 정답입니다!"
+            "eng": "The boy [who] sits next to {NAME} sneezed so hard that his rice flew to Busan.",
+            "kor": "{NAME} 옆에 앉은 남자아이가 재채기를 너무 세게 해서 밥알이 부산까지 날아갔다.",
+            "tip": "👉 주어 'The boy'(사람)를 꾸미는 <b>who</b>! 진짜 동사는 sneezed예요.",
+            "img": "a boy sneezing so hard in a school cafeteria that rice grains fly across a map of Korea",
+            "scene": "🤧🍚🚀",
+            "quiz": {
+              "sentence": "The girl ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) got two puddings looked like she had won the lottery.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The girl'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The teacher [who] checks our trays has eyes in the back of her head.",
+            "kor": "식판 검사를 하는 선생님은 뒤통수에도 눈이 달려 있다.",
+            "tip": "👉 주어 'The teacher'(사람) → <b>who</b>! 공감 100%...",
+            "img": "a teacher checking lunch trays in a cafeteria with cartoon eyes drawn on the back of her head, students sneaking vegetables",
+            "scene": "👩‍🏫👀🥦",
+            "quiz": {
+              "sentence": "Everyone cheered for the student ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) finally ate the broccoli.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the student'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} swallowed a flying sausage [which] bounces like a superball.",
+            "kor": "{NAME}은(는) 탱탱볼처럼 튀어 오르는 날아다니는 소시지를 꿀꺽 삼켰다.",
+            "tip": "👉 선행사 'a flying sausage'(사물)를 설명하는 주격 관계대명사 <b>which</b>!",
+            "img": "a surprised student swallowing a flying sausage that bounces like a rubber superball in a school cafeteria",
+            "scene": "🌭💨🏀",
+            "quiz": {
+              "sentence": "{NAME} found a spoon ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) sings opera when it touches kimchi.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'a spoon'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The cafeteria made a tteokbokki [which] was so spicy that the fire alarm went off.",
+            "kor": "급식실에서 너무 매워서 화재경보기가 울린 떡볶이를 만들었다.",
+            "tip": "👉 선행사 'a tteokbokki'(사물) + 동사 was → <b>which</b>!",
+            "img": "a bowl of super spicy tteokbokki with cartoon flames setting off a school fire alarm, students fanning their mouths",
+            "scene": "🌶️🔥🚨",
+            "quiz": {
+              "sentence": "The milk ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} forgot in the locker for a month started talking.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The milk'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "Today's menu has a soup [which] tastes exactly like Monday.",
+            "kor": "오늘 메뉴에는 딱 월요일 맛이 나는 국이 있다.",
+            "tip": "👉 선행사 'a soup'(사물) → <b>which</b>! (월요일 맛... 무슨 맛인지 다 알죠?)",
+            "img": "a gloomy grey soup on a school lunch tray with a sad calendar page reading Monday floating above it",
+            "scene": "🥣📅😩",
+            "quiz": {
+              "sentence": "This is the jelly ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) changes color when the teacher walks by.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'the jelly'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} dropped a meatball [which] rolled all the way into the principal's office.",
+            "kor": "{NAME}은(는) 교장실까지 데굴데굴 굴러간 미트볼을 떨어뜨렸다.",
+            "tip": "👉 선행사 'a meatball'(사물) + rolled → <b>which</b>!",
+            "img": "a single meatball rolling down a long school hallway toward an office door while a student chases it",
+            "scene": "🧆🏃🚪",
+            "quiz": {
+              "sentence": "The pizza ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) came on Friday disappeared in 0.3 seconds.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The pizza'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} fought a robot chef [whose] laser eyes fry 500 pork cutlets in a second.",
+            "kor": "{NAME}은(는) 레이저 눈으로 1초 만에 500개의 돈가스를 튀기는 로봇 요리사와 싸웠다.",
+            "tip": "👉 로봇 요리사의(whose) 레이저 눈! 뒤에 명사(laser eyes)가 오므로 소유격 <b>whose</b>를 씁니다.",
+            "img": "a brave student battling a robot chef whose laser eyes instantly fry hundreds of pork cutlets in a school kitchen",
+            "scene": "🤖👀🍖",
+            "quiz": {
+              "sentence": "{NAME} sat next to a boy ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) lunch box was full of dancing crabs.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'남자아이의 도시락(lunch box)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "The cafeteria made a tteokbokki [whose] spice level is \"call 119.\"",
+            "kor": "급식실에서 매운 단계가 '119 불러'인 떡볶이를 만들었다.",
+            "tip": "👉 떡볶이의(whose) 매운 단계! 명사 spice level 앞에 <b>whose</b>.",
+            "img": "a bowl of glowing red tteokbokki with a spice meter pointing to the danger zone, an ambulance icon nearby",
+            "scene": "🌶️📟🚑",
+            "quiz": {
+              "sentence": "We have a cook ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) kimchi has its own fan club.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'조리사님의 김치(kimchi)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} hired a penguin [whose] job is to keep the cafeteria cold.",
+            "kor": "{NAME}은(는) 급식실을 시원하게 유지하는 게 일인 펭귄을 고용했다.",
+            "tip": "👉 펭귄의(whose) 일! 명사 job 앞에 <b>whose</b>.",
+            "img": "a cute penguin wearing a staff name tag blowing cold air with a tiny fan in a school cafeteria",
+            "scene": "🐧❄️🪪",
+            "quiz": {
+              "sentence": "I met a pig ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) nose can smell fried chicken from 10 km away.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'돼지의 코(nose)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} talked to a boy [whose] lunch box plays music when it opens.",
+            "kor": "{NAME}은(는) 열면 음악이 나오는 도시락을 가진 남자아이와 이야기했다.",
+            "tip": "👉 남자아이의(whose) 도시락! 명사 lunch box 앞에는 소유격 <b>whose</b>.",
+            "img": "a boy opening a lunch box that plays music with notes flying out",
+            "scene": "🍱🎵👦",
+            "quiz": {
+              "sentence": "{NAME} chose a table ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) legs were made of churros.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'탁자의 다리(legs)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} invented a spoon [that] eats the vegetables for you.",
+            "kor": "{NAME}은(는) 채소를 대신 먹어 주는 숟가락을 발명했다.",
+            "tip": "👉 <b>that</b>은 사물(숟가락)에도 사람에도 쓰는 만능 관계대명사!",
+            "img": "a student holding a magic spoon that eats broccoli by itself",
+            "scene": "🥄🥦✨",
+            "quiz": {
+              "sentence": "This is the best fried chicken ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) our school has ever served.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the best fried chicken'에 최상급·서수·the only가 붙어 있으면 <b>that</b>을 즐겨 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "{NAME} grabbed the last chicken leg [that] was left on the tray.",
+            "kor": "{NAME}은(는) 식판에 남아 있던 마지막 닭다리를 집었다.",
+            "tip": "👉 'the last'처럼 선행사에 서수·최상급이 붙으면 <b>that</b>을 즐겨 써요!",
+            "img": "a student triumphantly grabbing the last fried chicken leg from a cafeteria tray",
+            "scene": "🍗🏆😤",
+            "quiz": {
+              "sentence": "{NAME} ate everything ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) was on the teacher's tray.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'everything'처럼 all·every·-thing이 붙으면 <b>that</b>을 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "{NAME} is the only student [that] beat the principal at rock-paper-scissors 100 times in a row.",
+            "kor": "{NAME}은(는) 교장 선생님을 가위바위보로 100번 연속 이긴 유일한 학생이다.",
+            "tip": "👉 'the only'가 붙은 선행사 → <b>that</b>!",
+            "img": "a student playing rock paper scissors against a shocked principal with a scoreboard showing 100 wins",
+            "scene": "✌️✊🏆",
+            "quiz": {
+              "sentence": "{NAME} is the fastest eater ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the cafeteria has ever seen.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the fastest eater'에 최상급·서수·the only가 붙어 있으면 <b>that</b>을 즐겨 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "{NAME} saw a cook and a cat [that] were racing for the last fish cake.",
+            "kor": "{NAME}은(는) 마지막 어묵을 두고 달리기 시합을 하던 조리사님과 고양이를 보았다.",
+            "tip": "👉 선행사가 사람(a cook) + 동물(a cat)이 섞여 있으면 <b>that</b>을 써요!",
+            "img": "a school cook and a cat racing each other toward the last fish cake skewer in a cafeteria",
+            "scene": "👨‍🍳🐱🍢",
+            "quiz": {
+              "sentence": "Look at the boy and the dog ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) are sharing one sandwich.",
+              "options": [
+                "that",
+                "who",
+                "which"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the boy and the dog'처럼 사람과 사물·동물이 섞여 있으면 <b>that</b>만 쓸 수 있어요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "[What] {NAME} wants for lunch is a bucket of fried chicken.",
+            "kor": "{NAME}이(가) 점심으로 원하는 것은 치킨 한 통이다.",
+            "tip": "👉 What절(What {NAME} wants for lunch)이 문장 전체의 주어! '~하는 것' = <b>what</b>.",
+            "img": "a student dreaming of a bucket of fried chicken at lunch",
+            "scene": "🍗🪣💭",
+            "quiz": {
+              "sentence": "{NAME} ate ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) was inside the mystery dumpling.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, was 앞의 주어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "The cook couldn't believe [what] {NAME} put in the curry.",
+            "kor": "조리사님은 {NAME}이(가) 카레에 넣은 것을 믿을 수 없었다.",
+            "tip": "👉 선행사 없이 '{NAME}이 카레에 넣은 것' → <b>what</b>! put 뒤 목적어가 없죠?",
+            "img": "a shocked school cook looking at a student adding strange colorful things into a pot of curry",
+            "scene": "🍛😱🧂",
+            "quiz": {
+              "sentence": "( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) we need now is more ketchup!",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, 문장의 주어 자리이고 need의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "Chicken is [what] turns a boring Wednesday into a holiday.",
+            "kor": "치킨은 지루한 수요일을 휴일로 바꿔 주는 것이다.",
+            "tip": "👉 '수요일을 휴일로 바꿔 주는 것' → <b>what</b>! turns의 주어가 비어 있어요.",
+            "img": "a plate of fried chicken with confetti turning a grey Wednesday calendar into a party",
+            "scene": "🍗🎉📅",
+            "quiz": {
+              "sentence": "I love ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) you brought for lunch. Can I have some?",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, brought의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "[What] {NAME} found under the lunch tray was a fan letter from a carrot.",
+            "kor": "{NAME}이(가) 식판 밑에서 발견한 것은 당근이 쓴 팬레터였다.",
+            "tip": "👉 What절이 문장의 주어! '{NAME}이 발견한 것' = <b>what</b>.",
+            "img": "a cute carrot with a shy face handing a heart-covered fan letter to a student at a lunch table",
+            "scene": "🥕💌😳",
+            "quiz": {
+              "sentence": "This pudding is exactly ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) I dreamed about in math class.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, about 뒤의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
             }
           }
         ]
       },
       {
-        id: 'zombie', name: '좀비 사태', flavor: '마늘 양치 좀비맛', icon: '🧟', color: '#2fbf71',
-        templates: [
+        "id": "zombie",
+        "name": "좀비 사태",
+        "flavor": "마늘 양치 좀비맛",
+        "icon": "🧟",
+        "color": "#2fbf71",
+        "templates": [
           {
-            eng: "{NAME} kissed a handsome zombie [who] brushes his teeth with garlic paste.",
-            kor: "{NAME}은(는) 마늘 반죽으로 양치질을 하는 잘생긴 좀비에게 뽀뽀했다.",
-            tip: "👉 선행사 'a handsome zombie'(사람 취급) 뒤에서 주어 역할을 하는 <b>who</b>!",
-            img: "a student blowing a kiss to a handsome friendly cartoon zombie who is brushing his teeth with garlic paste",
-            scene: "🧟💋🧄",
-            quiz: {
-              sentence: "{NAME} is riding a mutant pigeon ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) poop can cure the zombie virus.",
-              options: ["who", "which", "whose"], answerIndex: 2,
-              explanation: "돌연변이 비둘기'의(whose)' 똥(poop)이므로 소유격 관계대명사 <b>whose</b>가 정답!"
+            "eng": "{NAME} high-fived a polite zombie [who] brushes his teeth with garlic paste.",
+            "kor": "{NAME}은(는) 마늘 반죽으로 양치질을 하는 예의 바른 좀비와 하이파이브를 했다.",
+            "tip": "👉 선행사 'a polite zombie'(사람처럼 행동하는 좀비) 뒤에서 주어 역할을 하는 <b>who</b>!",
+            "img": "a student giving a high five to a polite friendly cartoon zombie brushing his teeth with garlic paste",
+            "scene": "🧟🙌🧄",
+            "quiz": {
+              "sentence": "The doctor ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) found the zombie cure is only 15 years old.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The doctor'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "{NAME} is riding a mutant pigeon [whose] poop can cure the zombie virus.",
-            kor: "{NAME}은(는) 똥으로 좀비 바이러스를 치료할 수 있는 돌연변이 비둘기를 타고 있다.",
-            tip: "👉 돌연변이 비둘기'의' 똥! 소유격 관계대명사 <b>whose</b>가 명사 앞을 딱 지켜줍니다.",
-            img: "a student riding a giant glowing mutant pigeon flying over a city full of silly cartoon zombies",
-            scene: "🕊️🧪🧟",
-            quiz: {
-              sentence: "{NAME} threw a stinky sock ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) exploded and wiped out the zombie king.",
-              options: ["who", "which", "whose"], answerIndex: 1,
-              explanation: "냄새나는 양말(a stinky sock)은 사물이므로 주격 관계대명사 <b>which</b>가 정답입니다!"
+            "eng": "The zombie hunter [who] lives next door is afraid of hamsters.",
+            "kor": "옆집에 사는 좀비 사냥꾼은 햄스터를 무서워한다.",
+            "tip": "👉 주어 'The zombie hunter'(사람)를 꾸미는 <b>who</b>! 진짜 동사는 is예요.",
+            "img": "a tough zombie hunter jumping in fear from a tiny cute hamster",
+            "scene": "🏹😨🐹",
+            "quiz": {
+              "sentence": "The boy ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) screamed the loudest became the team leader.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The boy'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "{NAME} threw a stinky sock [which] exploded and wiped out the zombie king.",
-            kor: "{NAME}은(는) 냅다 폭발해서 좀비 왕을 전멸시킨 냄새나는 양말을 던졌다.",
-            tip: "👉 냄새나는 양말(a stinky sock)은 사물이니까 <b>which</b>(또는 that)로 수식합니다!",
-            img: "a student throwing a stinky green sock that explodes in a cartoon cloud in front of a silly zombie king wearing a crown",
-            scene: "🧦💥👑",
-            quiz: {
-              sentence: "We couldn't believe ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} gave to the handsome zombie.",
-              options: ["what", "who", "which"], answerIndex: 0,
-              explanation: "선행사가 없고 '{NAME}이 좀비에게 준 것'이라는 뜻이므로 <b>what</b>이 정답입니다!"
+            "eng": "{NAME} saved a grandma [who] was fighting zombies with a frying pan.",
+            "kor": "{NAME}은(는) 프라이팬으로 좀비와 싸우던 할머니를 구했다.",
+            "tip": "👉 선행사 'a grandma'(사람) + was fighting → 주격 <b>who</b>!",
+            "img": "a brave cool grandma fighting silly cartoon zombies with a frying pan while a student cheers",
+            "scene": "👵🍳🧟",
+            "quiz": {
+              "sentence": "The nurse ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) helped {NAME} was actually a vampire.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The nurse'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "My classmate [who] never studies survived the zombie attack because he was asleep the whole time.",
+            "kor": "공부를 절대 안 하는 우리 반 친구는 내내 자고 있어서 좀비 습격에서 살아남았다.",
+            "tip": "👉 주어 'My classmate'(사람) → <b>who</b>! 진짜 동사는 survived예요.",
+            "img": "a student sleeping peacefully at a classroom desk while silly cartoon zombies tiptoe past him",
+            "scene": "😴🧟📚",
+            "quiz": {
+              "sentence": "We need a leader ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) can outrun a zombie on a skateboard.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a leader'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} threw a stinky sock [which] exploded and wiped out the zombie king.",
+            "kor": "{NAME}은(는) 냅다 폭발해서 좀비 왕을 전멸시킨 냄새나는 양말을 던졌다.",
+            "tip": "👉 냄새나는 양말(a stinky sock)은 사물이니까 <b>which</b>(또는 that)로 수식합니다!",
+            "img": "a student throwing a stinky green sock that explodes in a cartoon cloud in front of a silly zombie king wearing a crown",
+            "scene": "🧦💥👑",
+            "quiz": {
+              "sentence": "Zombies hate the garlic bread ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} baked.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'the garlic bread'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The zombies ran away from a smell [which] came from {NAME}'s gym shoes.",
+            "kor": "좀비들은 {NAME}의 체육 시간 운동화에서 나는 냄새를 피해 도망쳤다.",
+            "tip": "👉 선행사 'a smell'(사물) + came → <b>which</b>!",
+            "img": "cartoon zombies running away holding their noses from a pair of smelly sneakers with green stink lines",
+            "scene": "👟🤢🧟",
+            "quiz": {
+              "sentence": "{NAME} used a water gun ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) shoots hot sauce.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'a water gun'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} built a wall [which] was made of last year's math tests.",
+            "kor": "{NAME}은(는) 작년 수학 시험지로 만든 벽을 쌓았다.",
+            "tip": "👉 선행사 'a wall'(사물) → <b>which</b>!",
+            "img": "a student building a defensive wall out of stacks of old math test papers covered in red marks",
+            "scene": "📝🧱🛡️",
+            "quiz": {
+              "sentence": "The radio ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} fixed only plays trot music.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The radio'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The zombies stopped at a sign [which] said, \"Wi-Fi password: brains.\"",
+            "kor": "좀비들은 '와이파이 비번: brains(뇌)'라고 적힌 표지판 앞에서 멈췄다.",
+            "tip": "👉 선행사 'a sign'(사물) + said → <b>which</b>!",
+            "img": "a group of cartoon zombies happily staring at a wifi sign on a cafe wall",
+            "scene": "📶🧟🪧",
+            "quiz": {
+              "sentence": "The zombies followed a smell ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) came from the school cafeteria.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'a smell'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} is riding a mutant pigeon [whose] poop can cure the zombie virus.",
+            "kor": "{NAME}은(는) 똥으로 좀비 바이러스를 치료할 수 있는 돌연변이 비둘기를 타고 있다.",
+            "tip": "👉 돌연변이 비둘기'의' 똥! 소유격 관계대명사 <b>whose</b>가 명사 앞을 딱 지켜줍니다.",
+            "img": "a student riding a giant glowing mutant pigeon flying over a city full of silly cartoon zombies",
+            "scene": "🕊️🧪🧟",
+            "quiz": {
+              "sentence": "{NAME} hid in a car ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) windows were covered in slime.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'자동차의 창문(windows)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} met a zombie [whose] only weakness is a math question.",
+            "kor": "{NAME}은(는) 유일한 약점이 수학 문제인 좀비를 만났다.",
+            "tip": "👉 좀비의(whose) 약점! 명사 weakness 앞에 <b>whose</b>.",
+            "img": "a cartoon zombie panicking and running from a giant math equation written on a chalkboard",
+            "scene": "🧟➗😵",
+            "quiz": {
+              "sentence": "The zombie ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) shoes were untied tripped and said sorry.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'좀비의 신발(shoes)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "The zombie [whose] phone battery was at 1% walked slower than a snail.",
+            "kor": "휴대폰 배터리가 1%였던 좀비는 달팽이보다 느리게 걸었다.",
+            "tip": "👉 좀비의(whose) 휴대폰 배터리! 주어 The zombie를 꾸미는 <b>whose</b>절이에요.",
+            "img": "a tired cartoon zombie staring at a phone with a red 1% battery, a snail passing him",
+            "scene": "🧟🪫🐌",
+            "quiz": {
+              "sentence": "{NAME} drove a truck ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) horn sounds like a crying goat.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'트럭의 경적(horn)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} joined a team [whose] members all wear chicken costumes.",
+            "kor": "{NAME}은(는) 멤버 전원이 닭 옷을 입는 팀에 들어갔다.",
+            "tip": "👉 팀의(whose) 멤버들! 명사 members 앞에는 <b>whose</b>.",
+            "img": "a team of zombie fighters all wearing funny chicken costumes",
+            "scene": "🐔👥⚔️",
+            "quiz": {
+              "sentence": "A zombie ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) hat was too big asked {NAME} for directions.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'좀비의 모자(hat)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} invented a perfume [that] makes zombies do their homework.",
+            "kor": "{NAME}은(는) 좀비가 숙제를 하게 만드는 향수를 발명했다.",
+            "tip": "👉 사물(a perfume) 선행사에 만능 <b>that</b>!",
+            "img": "cartoon zombies sitting at desks doing homework after a student sprays a sparkly perfume",
+            "scene": "🧴📓🧟",
+            "quiz": {
+              "sentence": "This is the only door ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) zombies can't open: the teachers' room.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the only door'에 최상급·서수·the only가 붙어 있으면 <b>that</b>을 즐겨 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "The zombie [that] lives upstairs only attacks people with low phone battery.",
+            "kor": "위층에 사는 좀비는 휴대폰 배터리가 부족한 사람만 공격한다.",
+            "tip": "👉 <b>that</b>은 사람·사물 어디에나 쓰는 만능 관계대명사! 진짜 동사는 attacks.",
+            "img": "a cartoon zombie on an apartment staircase sniffing for phones with low battery icons",
+            "scene": "🧟🔋🏢",
+            "quiz": {
+              "sentence": "{NAME} took all the snacks ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) were in the teachers' room.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'all the snacks'처럼 all·every·-thing이 붙으면 <b>that</b>을 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "It was the scariest night [that] {NAME} had ever had... until the report card came.",
+            "kor": "그날은 {NAME}이(가) 겪어 본 가장 무서운 밤이었다… 성적표가 오기 전까지는.",
+            "tip": "👉 최상급(the scariest)이 붙은 선행사 → <b>that</b>!",
+            "img": "a student hiding under a blanket at night, more scared of a report card envelope than the zombies outside",
+            "scene": "🌙📄😱",
+            "quiz": {
+              "sentence": "Zombies can't climb the ladder ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} made.",
+              "options": [
+                "that",
+                "who",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the ladder'는 사물이에요. 보기 중 사물에 쓸 수 있는 건 만능 <b>that</b>뿐! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "The zombies followed a man and his cat [that] were dancing in the rain.",
+            "kor": "좀비들은 빗속에서 춤추던 남자와 그의 고양이를 따라갔다.",
+            "tip": "👉 선행사가 사람(a man) + 동물(his cat) → <b>that</b>!",
+            "img": "a man and his cat dancing happily in the rain while silly zombies follow them",
+            "scene": "🕺🐱🌧️",
+            "quiz": {
+              "sentence": "Everything ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the zombie touched turned into broccoli.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'Everything'처럼 all·every·-thing이 붙으면 <b>that</b>을 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "[What] the zombies really want is a hug.",
+            "kor": "좀비들이 정말로 원하는 것은 포옹이다.",
+            "tip": "👉 What절이 문장의 주어! '좀비들이 원하는 것' = <b>what</b>.",
+            "img": "a group of lonely cute cartoon zombies asking for a hug with open arms",
+            "scene": "🧟🤗💕",
+            "quiz": {
+              "sentence": "Nobody believed ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} saw in the basement: a zombie doing yoga.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, saw의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} couldn't believe [what] the zombie said: \"Do you have a charger?\"",
+            "kor": "{NAME}은(는) 좀비가 한 말을 믿을 수 없었다. \"혹시 충전기 있어요?\"",
+            "tip": "👉 선행사 없이 '좀비가 말한 것' → <b>what</b>! said 뒤 목적어가 없어요.",
+            "img": "a cartoon zombie politely holding out a dead phone asking a surprised student for a charger",
+            "scene": "🧟🔌😮",
+            "quiz": {
+              "sentence": "( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) saved the city was {NAME}'s stinky sock.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, saved의 주어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "Garlic is [what] {NAME} sprays instead of perfume.",
+            "kor": "마늘은 {NAME}이(가) 향수 대신 뿌리는 것이다.",
+            "tip": "👉 '{NAME}이 향수 대신 뿌리는 것' → <b>what</b>! sprays 뒤 목적어가 비었죠?",
+            "img": "a student spraying a garlic-shaped perfume bottle while zombies run away",
+            "scene": "🧄💨🧟",
+            "quiz": {
+              "sentence": "The zombie spat out ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} put in its soup.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, put의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} did [what] no one else could do: make a zombie laugh.",
+            "kor": "{NAME}은(는) 아무도 못 한 일, 바로 좀비를 웃게 만드는 일을 해냈다.",
+            "tip": "👉 선행사 없이 '아무도 할 수 없던 것' → <b>what</b>!",
+            "img": "a student telling jokes to a zombie who is laughing out loud",
+            "scene": "🧟😂🎤",
+            "quiz": {
+              "sentence": "A phone charger is exactly ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the zombie king wanted.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, wanted의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
             }
           }
         ]
       },
       {
-        id: 'romance', name: '로맨스 판타지', flavor: '황금 변기솔맛', icon: '👑', color: '#e84fd0',
-        templates: [
+        "id": "romance",
+        "name": "로맨스 판타지",
+        "flavor": "황금 변기솔맛",
+        "icon": "👑",
+        "color": "#e84fd0",
+        "templates": [
           {
-            eng: "The emperor gave {NAME} [what] no one expected: a golden toilet brush.",
-            kor: "황제는 아무도 예상하지 못한 것, 바로 황금 변기 솔을 {NAME}에게 하사했다.",
-            tip: "👉 선행사 없이 '~하는 것(아무도 예상 못 한 것)'으로 해석될 때는 <b>what</b>을 씁니다!",
-            img: "a fantasy emperor on a royal throne presenting a shiny golden toilet brush to a surprised student in a palace",
-            scene: "👑🚽✨",
-            quiz: {
-              sentence: "{NAME} slapped a snobby duke ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) was wearing pink Hello Kitty underwear.",
-              options: ["which", "who", "whose"], answerIndex: 1,
-              explanation: "선행사 'a snobby duke'(건방진 공작)는 사람이므로 <b>who</b>가 정답입니다!"
+            "eng": "The emperor gave {NAME} [what] no one expected: a golden toilet brush.",
+            "kor": "황제는 아무도 예상하지 못한 것, 바로 황금 변기 솔을 {NAME}에게 하사했다.",
+            "tip": "👉 선행사 없이 '~하는 것(아무도 예상 못 한 것)'으로 해석될 때는 <b>what</b>을 씁니다!",
+            "img": "a fantasy emperor on a royal throne presenting a shiny golden toilet brush to a surprised student in a palace",
+            "scene": "👑🚽✨",
+            "quiz": {
+              "sentence": "The prince ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} met at the ball can't dance at all.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The prince'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "{NAME} slapped a snobby duke [who] was wearing pink Hello Kitty underwear.",
-            kor: "{NAME}은(는) 분홍색 헬로키티 팬티를 입고 있던 건방진 공작의 뺨을 때렸다.",
-            tip: "👉 건방진 공작(사람)을 꾸며주는 주격 관계대명사 <b>who</b>! (진정한 로판 사이다네요)",
-            img: "a confident student in a royal ballroom scolding a snobby duke wearing silly pink polka dot pajamas",
-            scene: "👋🤴🩷",
-            quiz: {
-              sentence: "{NAME} drank a magic potion ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) turns sweat into strawberry milk.",
-              options: ["who", "whose", "that"], answerIndex: 2,
-              explanation: "선행사 'a magic potion'(마법 물약)은 사물이므로 which나 <b>that</b>을 써야 합니다!"
+            "eng": "{NAME} scolded a snobby duke [who] cut in line at the royal buffet.",
+            "kor": "{NAME}은(는) 왕실 뷔페에서 새치기를 한 건방진 공작을 혼냈다.",
+            "tip": "👉 건방진 공작(사람)을 꾸며주는 주격 관계대명사 <b>who</b>! (진정한 로판 사이다네요)",
+            "img": "a confident student in a royal banquet hall scolding a snobby duke who cut in line at a fancy buffet",
+            "scene": "🍰🤴😤",
+            "quiz": {
+              "sentence": "{NAME} rode a horse ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) mane was made of cotton candy.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'말의 갈기(mane)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
             }
           },
           {
-            eng: "{NAME} drank a magic potion [that] turns sweat into strawberry milk.",
-            kor: "{NAME}은(는) 땀을 흘리면 딸기 우유로 변하게 하는 마법의 물약을 마셨다.",
-            tip: "👉 <b>that</b>은 사물(마법 물약)과 사람 모두 쓸 수 있는 만능 치트키입니다!",
-            img: "a student drinking a glowing pink magic potion while sweat drops turn into strawberry milk splashes",
-            scene: "🧪💦🍓",
-            quiz: {
-              sentence: "The princess lost the diamond ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} found in the golden toilet.",
-              options: ["which", "who", "what"], answerIndex: 0,
-              explanation: "다이아몬드(사물)를 꾸미는 목적격 관계대명사이므로 <b>which</b>가 맞습니다!"
+            "eng": "{NAME} drank a magic potion [that] turns sweat into strawberry milk.",
+            "kor": "{NAME}은(는) 땀을 딸기 우유로 바꿔 주는 마법의 물약을 마셨다.",
+            "tip": "👉 <b>that</b>은 사물(마법 물약)과 사람 모두 쓸 수 있는 만능 치트키입니다!",
+            "img": "a student drinking a glowing pink magic potion while sweat drops turn into strawberry milk splashes",
+            "scene": "🧪💦🍓",
+            "quiz": {
+              "sentence": "The castle ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the king built is made of chocolate.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The castle'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} became best friends with a prince [who] cries at every sad drama.",
+            "kor": "{NAME}은(는) 슬픈 드라마만 보면 우는 왕자와 절친이 되었다.",
+            "tip": "👉 선행사 'a prince'(사람) + 동사 cries → <b>who</b>!",
+            "img": "a student and a prince sharing popcorn while the prince cries at a drama on TV in a royal castle",
+            "scene": "🤴😭🍿",
+            "quiz": {
+              "sentence": "The maid ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) cleans the castle is secretly a dragon.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The maid'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The knight [who] protects {NAME} is scared of butterflies.",
+            "kor": "{NAME}을(를) 지키는 기사는 나비를 무서워한다.",
+            "tip": "👉 주어 'The knight'(사람)를 꾸미는 <b>who</b>! 진짜 동사는 is예요.",
+            "img": "a knight in shiny armor running away from a tiny butterfly",
+            "scene": "🛡️🦋😱",
+            "quiz": {
+              "sentence": "{NAME} is a princess ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) eats spicy ramen for breakfast.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a princess'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} caught the minister [who] secretly ate the queen's birthday cake.",
+            "kor": "{NAME}은(는) 여왕의 생일 케이크를 몰래 먹은 대신을 붙잡았다.",
+            "tip": "👉 선행사 'the minister'(사람) → <b>who</b>!",
+            "img": "a royal minister caught with cake frosting all over his face holding an empty cake plate",
+            "scene": "👸🎂🔍",
+            "quiz": {
+              "sentence": "The wizard ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) lives in the tower sells magic socks for 3 gold coins.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The wizard'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} wore a crown [which] plays a ringtone every time the king calls.",
+            "kor": "{NAME}은(는) 왕이 부를 때마다 벨소리가 울리는 왕관을 썼다.",
+            "tip": "👉 선행사 'a crown'(사물) → <b>which</b>!",
+            "img": "a sparkling crown ringing like a phone with musical notes on a student's head",
+            "scene": "👑📳🎵",
+            "quiz": {
+              "sentence": "The mirror ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) hangs in the hall only tells dad jokes.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The mirror'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The duke sent {NAME} a letter [which] smelled like fried chicken.",
+            "kor": "공작은 {NAME}에게 치킨 냄새가 나는 편지를 보냈다.",
+            "tip": "👉 선행사 'a letter'(사물) + 동사 smelled → <b>which</b>!",
+            "img": "a fancy royal letter with a fried chicken smell drifting out of it",
+            "scene": "💌🍗👃",
+            "quiz": {
+              "sentence": "{NAME} found a ring ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) makes people tell the truth about their search history.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'a ring'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} lives in a palace [which] has 300 rooms and zero Wi-Fi.",
+            "kor": "{NAME}은(는) 방은 300개인데 와이파이는 하나도 없는 궁전에 산다.",
+            "tip": "👉 선행사 'a palace'(사물) → <b>which</b>!",
+            "img": "a huge pink palace with a sad student holding a phone showing no signal",
+            "scene": "🏰📵😭",
+            "quiz": {
+              "sentence": "The dress ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} wore at the ball was made of pizza boxes.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The dress'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The knight rode a unicorn [which] was afraid of the dark.",
+            "kor": "기사는 어둠을 무서워하는 유니콘을 탔다.",
+            "tip": "👉 선행사 'a unicorn'(동물) → 동물에도 <b>which</b>!",
+            "img": "a knight riding a nervous unicorn holding a tiny lantern at night",
+            "scene": "🦄🌑🕯️",
+            "quiz": {
+              "sentence": "This is the sword ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the hero used to cut a birthday cake.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'the sword'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} adopted a dragon [whose] breath smells like roses.",
+            "kor": "{NAME}은(는) 입김에서 장미 향기가 나는 용을 입양했다.",
+            "tip": "👉 용의(whose) 입김! 명사 breath 앞에 <b>whose</b>.",
+            "img": "a cute baby dragon breathing pink rose petals next to a student",
+            "scene": "🐉🌹💨",
+            "quiz": {
+              "sentence": "The queen ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) crown was stolen put up a missing poster.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'여왕의 왕관(crown)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} danced with a duke [whose] shoes squeak like rubber ducks.",
+            "kor": "{NAME}은(는) 신발에서 고무 오리 소리가 나는 공작과 춤을 추었다.",
+            "tip": "👉 공작의(whose) 신발! 명사 shoes 앞에는 <b>whose</b>.",
+            "img": "a duke dancing at a royal ball with squeaky shoes, rubber ducks floating around",
+            "scene": "🤵🦆💃",
+            "quiz": {
+              "sentence": "{NAME} talked to a mermaid ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) tail was shining like gold.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'인어의 꼬리(tail)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} visited a kingdom [whose] king is a golden retriever.",
+            "kor": "{NAME}은(는) 왕이 골든 리트리버인 왕국을 방문했다.",
+            "tip": "👉 왕국의(whose) 왕! 명사 king 앞에 <b>whose</b>.",
+            "img": "a golden retriever wearing a crown sitting on a royal throne",
+            "scene": "🐕👑🏰",
+            "quiz": {
+              "sentence": "The witch ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) cat speaks English sells cloud cookies.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'마녀의 고양이(cat)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} met a royal chef [whose] cake was taller than the castle.",
+            "kor": "{NAME}은(는) 만든 케이크가 성보다 높은 왕실 요리사를 만났다.",
+            "tip": "👉 요리사의(whose) 케이크! 명사 cake 앞에 <b>whose</b>.",
+            "img": "a royal chef proudly standing next to a gigantic cake taller than a castle tower",
+            "scene": "👨‍🍳🎂🏰",
+            "quiz": {
+              "sentence": "The knight ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) horse ran away had to take the bus home.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'기사의 말(horse)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} is the first maid [that] became an empress.",
+            "kor": "{NAME}은(는) 황후가 된 최초의 하녀이다.",
+            "tip": "👉 'the first'가 붙은 선행사 → <b>that</b>을 즐겨 써요!",
+            "img": "a maid in an apron being crowned empress in a grand palace",
+            "scene": "🧹👑✨",
+            "quiz": {
+              "sentence": "This is the most expensive pudding ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the king has ever eaten.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the most expensive pudding'에 최상급·서수·the only가 붙어 있으면 <b>that</b>을 즐겨 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "The emperor gave {NAME} everything [that] was in the treasure room.",
+            "kor": "황제는 보물 창고에 있던 모든 것을 {NAME}에게 주었다.",
+            "tip": "👉 'everything'처럼 -thing으로 끝나는 선행사 → <b>that</b>!",
+            "img": "a royal treasure room overflowing with gold and jewels being given to a student",
+            "scene": "💰💎🎁",
+            "quiz": {
+              "sentence": "{NAME} saw a prince and a horse ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) were sleeping under a tree.",
+              "options": [
+                "that",
+                "who",
+                "which"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a prince and a horse'처럼 사람과 사물·동물이 섞여 있으면 <b>that</b>만 쓸 수 있어요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "The ball was the only party [that] {NAME} didn't fall asleep at.",
+            "kor": "그 무도회는 {NAME}이(가) 졸지 않은 유일한 파티였다.",
+            "tip": "👉 'the only'가 붙은 선행사 → <b>that</b>!",
+            "img": "a student wide awake and dancing at a glittering royal ball",
+            "scene": "💃🎉👀",
+            "quiz": {
+              "sentence": "The duke loves all the songs ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} writes.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'all the songs'처럼 all·every·-thing이 붙으면 <b>that</b>을 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "{NAME} finally said [what] everyone was thinking: \"This tea tastes like socks.\"",
+            "kor": "{NAME}은(는) 마침내 모두가 생각하던 것을 말했다. \"이 차, 양말 맛이 나요.\"",
+            "tip": "👉 '모두가 생각하던 것' → 선행사를 품은 <b>what</b>!",
+            "img": "a student at a royal tea party bravely holding up a teacup while nobles gasp",
+            "scene": "🫖🧦😮",
+            "quiz": {
+              "sentence": "The prince lost ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) he bought for {NAME}.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, bought의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "A golden spoon is [what] the queen gave {NAME} as a gift.",
+            "kor": "황금 숟가락은 여왕이 {NAME}에게 선물로 준 것이다.",
+            "tip": "👉 '여왕이 준 것' → <b>what</b>! gave의 목적어 자리가 비어 있어요.",
+            "img": "a queen handing a shining golden spoon to a student as a gift",
+            "scene": "🥄✨👸",
+            "quiz": {
+              "sentence": "( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the duke hides under his bed is a teddy bear.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, hides의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "The frog prince finally got [what] he wanted: a golden fly.",
+            "kor": "개구리 왕자는 마침내 원하던 것, 바로 황금 파리를 얻었다.",
+            "tip": "👉 '그가 원하던 것' → <b>what</b>!",
+            "img": "a happy frog wearing a tiny crown holding a shiny golden fly",
+            "scene": "🐸👑✨",
+            "quiz": {
+              "sentence": "{NAME} gave the king ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) he had asked for: a bigger crown.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, for 뒤의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
             }
           }
         ]
       },
       {
-        id: 'mystery', name: '학교 괴담', flavor: '대머리 귀신 샴푸맛', icon: '👻', color: '#7c5cff',
-        templates: [
+        "id": "mystery",
+        "name": "학교 괴담",
+        "flavor": "졸린 귀신 베개맛",
+        "icon": "👻",
+        "color": "#7c5cff",
+        "templates": [
           {
-            eng: "A bald ghost [that] lives in the toilet begged {NAME} for hair growth shampoo.",
-            kor: "화장실에 사는 대머리 귀신이 {NAME}에게 발모 샴푸를 달라고 애원했다.",
-            tip: "👉 <b>that</b>은 귀신(사람/사물)도 다 받아주는 만능 관계대명사입니다!",
-            img: "a cute bald cartoon ghost living in a school restroom begging a student for a bottle of hair growth shampoo",
-            scene: "👻🚽🧴",
-            quiz: {
-              sentence: "{NAME} met a skeleton ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) ribs are made of shiny glow sticks.",
-              options: ["who", "which", "whose"], answerIndex: 2,
-              explanation: "해골'의(whose)' 갈비뼈(ribs)이므로 소유격 관계대명사 <b>whose</b>가 정답입니다!"
+            "eng": "A sleepy ghost [that] lives in the restroom begged {NAME} for a pillow.",
+            "kor": "화장실에 사는 졸린 귀신이 {NAME}에게 베개를 달라고 애원했다.",
+            "tip": "👉 <b>that</b>은 귀신(사람/사물)도 다 받아주는 만능 관계대명사입니다!",
+            "img": "a cute sleepy cartoon ghost in a school restroom begging a student for a fluffy pillow",
+            "scene": "👻🛏️🥱",
+            "quiz": {
+              "sentence": "The janitor ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) works at night has never seen the sleepy ghost.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The janitor'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "{NAME} met a skeleton [whose] ribs are made of shiny glow sticks.",
-            kor: "{NAME}은(는) 갈비뼈가 콘서트장 야광봉으로 만들어진 해골을 만났다.",
-            tip: "👉 해골의(whose) 갈비뼈(ribs)! 뒤에 명사가 이어지면 묻지도 따지지도 않고 소유격 <b>whose</b>!",
-            img: "a friendly cartoon skeleton whose ribs are made of glowing concert light sticks meeting a student in a dark school hallway",
-            scene: "💀✨🎇",
-            quiz: {
-              sentence: "{NAME} ate a cursed chalk ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) makes you rap like Eminem during math class.",
-              options: ["who", "which", "whose"], answerIndex: 1,
-              explanation: "선행사 'a cursed chalk'(저주받은 분필)는 사물이므로 <b>which</b>가 정답입니다!"
+            "eng": "{NAME} met a skeleton [whose] ribs are made of shiny glow sticks.",
+            "kor": "{NAME}은(는) 갈비뼈가 콘서트장 야광봉으로 만들어진 해골을 만났다.",
+            "tip": "👉 해골의(whose) 갈비뼈(ribs)! 뒤에 명사가 이어지면 묻지도 따지지도 않고 소유격 <b>whose</b>!",
+            "img": "a friendly cartoon skeleton whose ribs are made of glowing concert light sticks meeting a student in a dark school hallway",
+            "scene": "💀✨🎇",
+            "quiz": {
+              "sentence": "{NAME} opened a locker ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) door was covered with sticky notes.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'사물함의 문(door)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
             }
           },
           {
-            eng: "{NAME} ate a cursed chalk [which] makes you rap like Eminem during math class.",
-            kor: "{NAME}은(는) 수학 시간에 에미넴처럼 미친 듯이 랩을 하게 만드는 저주받은 분필을 먹어버렸다.",
-            tip: "👉 선행사 '저주받은 분필'(사물) 뒤에 주어로 쓰인 관계대명사 <b>which</b>!",
-            img: "a student rapping wildly like a hip hop star with a microphone in math class after eating a glowing cursed chalk",
-            scene: "🖍️🎤➗",
-            quiz: {
-              sentence: "I wrote down ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the bald ghost said to {NAME}.",
-              options: ["what", "which", "that"], answerIndex: 0,
-              explanation: "선행사가 없고 said 뒤의 목적어가 비어 있어요. '대머리 귀신이 {NAME}에게 말한 것'이므로 <b>what</b>이 정답입니다!"
+            "eng": "{NAME} ate a cursed chalk [which] makes you rap like a hip-hop star during math class.",
+            "kor": "{NAME}은(는) 수학 시간에 힙합 스타처럼 랩을 하게 만드는 저주받은 분필을 먹어버렸다.",
+            "tip": "👉 선행사 '저주받은 분필'(사물) 뒤에 주어로 쓰인 관계대명사 <b>which</b>!",
+            "img": "a student rapping wildly like a hip hop star with a microphone in math class after eating a glowing cursed chalk",
+            "scene": "🖍️🎤➗",
+            "quiz": {
+              "sentence": "The piano ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) is in the music room plays K-pop at midnight.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The piano'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} followed a teacher [who] walks backwards every night.",
+            "kor": "{NAME}은(는) 매일 밤 뒤로 걷는 선생님을 따라갔다.",
+            "tip": "👉 선행사 'a teacher'(사람) + walks → <b>who</b>!",
+            "img": "a mysterious teacher walking backwards in a dark school hallway at night, a curious student following",
+            "scene": "👩‍🏫🔙🌙",
+            "quiz": {
+              "sentence": "The student ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) found the secret room got free lunch for a year.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The student'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The boy [who] sits in the last seat has no shadow.",
+            "kor": "맨 뒷자리에 앉는 남자아이는 그림자가 없다.",
+            "tip": "👉 주어 'The boy'를 꾸미는 <b>who</b>! 진짜 동사는 has예요.",
+            "img": "a boy sitting in the last seat of a classroom with no shadow under him, spooky but cute",
+            "scene": "🪑👤❓",
+            "quiz": {
+              "sentence": "We met a guard ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) says good night to every statue.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a guard'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The teacher [who] gave us a pop quiz on Friday is the real school ghost story.",
+            "kor": "금요일에 쪽지 시험을 낸 선생님이 진짜 학교 괴담이다.",
+            "tip": "👉 주어 'The teacher'(사람) → <b>who</b>! 진짜 동사는 is예요.",
+            "img": "students screaming in horror at a smiling teacher holding up a pop quiz paper, spooky lighting",
+            "scene": "📝😱👩‍🏫",
+            "quiz": {
+              "sentence": "Anyone ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) enters the science room at 4:44 turns into a frog.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'Anyone'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The girl [who] lives in the mirror copies {NAME}'s homework.",
+            "kor": "거울 속에 사는 여자아이는 {NAME}의 숙제를 베낀다.",
+            "tip": "👉 주어 'The girl'(사람) → <b>who</b>! 진짜 동사는 copies.",
+            "img": "a girl inside a mirror copying a student's homework",
+            "scene": "🪞✏️👧",
+            "quiz": {
+              "sentence": "{NAME} helped a boy ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) was lost in the school library for 3 days.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a boy'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} opened a box [which] was full of crying erasers.",
+            "kor": "{NAME}은(는) 우는 지우개로 가득 찬 상자를 열었다.",
+            "tip": "👉 선행사 'a box'(사물) → <b>which</b>!",
+            "img": "a box full of tiny cute erasers with crying faces",
+            "scene": "📦🧽😢",
+            "quiz": {
+              "sentence": "The clock ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) hangs in the hallway runs backwards on Mondays.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The clock'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "My teacher gave a pop quiz [which] had only one question: \"Are you awake?\"",
+            "kor": "선생님이 낸 쪽지 시험에는 딱 한 문제만 있었다. \"너 깨어 있니?\"",
+            "tip": "👉 선행사 'a pop quiz'(사물) + had → <b>which</b>!",
+            "img": "a sleepy classroom where a quiz paper shows one giant question mark, students yawning",
+            "scene": "📝❓😪",
+            "quiz": {
+              "sentence": "{NAME} read a book ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) wrote itself.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'a book'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} heard a song [which] came from the empty music room.",
+            "kor": "{NAME}은(는) 텅 빈 음악실에서 들려오는 노래를 들었다.",
+            "tip": "👉 선행사 'a song'(사물) + came → <b>which</b>!",
+            "img": "musical notes floating out of an empty school music room at night",
+            "scene": "🎹🎶🚪",
+            "quiz": {
+              "sentence": "The ghost lost a slipper ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} found in the pool.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'a slipper'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} met a ghost [whose] glasses were thicker than a dictionary.",
+            "kor": "{NAME}은(는) 안경이 사전보다 두꺼운 귀신을 만났다.",
+            "tip": "👉 귀신의(whose) 안경! 명사 glasses 앞에 <b>whose</b>.",
+            "img": "a cute ghost wearing super thick glasses in a school library",
+            "scene": "👻👓📖",
+            "quiz": {
+              "sentence": "The teacher ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) voice echoes at night is just practicing karaoke.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'선생님의 목소리(voice)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "The school has a statue [whose] eyes follow {NAME} everywhere.",
+            "kor": "학교에는 눈이 {NAME}을(를) 어디든 따라다니는 동상이 있다.",
+            "tip": "👉 동상의(whose) 눈! 명사 eyes 앞에 <b>whose</b>.",
+            "img": "a school statue whose eyes follow a nervous student",
+            "scene": "🗿👀🏃",
+            "quiz": {
+              "sentence": "{NAME} found a doll ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) hair grows every night.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'인형의 머리카락(hair)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} talked to a cat [whose] voice sounds like a news anchor.",
+            "kor": "{NAME}은(는) 목소리가 뉴스 앵커 같은 고양이와 대화했다.",
+            "tip": "👉 고양이의(whose) 목소리! 명사 voice 앞에 <b>whose</b>.",
+            "img": "a black cat on a school desk talking like a news anchor to a surprised student",
+            "scene": "🐈‍⬛📰🗣️",
+            "quiz": {
+              "sentence": "A boy ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) backpack was moving by itself ran to the office.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'남자아이의 가방(backpack)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} found the only key [that] opens the forbidden classroom.",
+            "kor": "{NAME}은(는) 금지된 교실을 여는 유일한 열쇠를 찾았다.",
+            "tip": "👉 'the only'가 붙은 선행사 → <b>that</b>!",
+            "img": "a student holding a glowing old key in front of a mysterious classroom door",
+            "scene": "🗝️🚪✨",
+            "quiz": {
+              "sentence": "It was the strangest sound ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} had ever heard: a ghost burping.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the strangest sound'에 최상급·서수·the only가 붙어 있으면 <b>that</b>을 즐겨 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "The ghost took everything [that] was in {NAME}'s pencil case.",
+            "kor": "귀신은 {NAME}의 필통에 있던 모든 것을 가져갔다.",
+            "tip": "👉 'everything' 선행사 → <b>that</b>!",
+            "img": "a playful ghost flying away with pencils and erasers from a pencil case",
+            "scene": "✏️👻🏃",
+            "quiz": {
+              "sentence": "{NAME} saw a girl and a dog ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) were walking through the wall.",
+              "options": [
+                "that",
+                "who",
+                "which"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a girl and a dog'처럼 사람과 사물·동물이 섞여 있으면 <b>that</b>만 쓸 수 있어요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "This is the first school ghost [that] has a cooking channel.",
+            "kor": "이 귀신이 바로 요리 채널을 운영하는 최초의 학교 귀신이다.",
+            "tip": "👉 'the first'가 붙은 선행사 → <b>that</b>!",
+            "img": "a cute ghost filming a cooking video with a camera in a school home economics room",
+            "scene": "👻📹🍳",
+            "quiz": {
+              "sentence": "All the lights ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) were in the hallway turned pink.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'All the lights'처럼 all·every·-thing이 붙으면 <b>that</b>을 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "[What] {NAME} heard in the empty classroom was the teacher's snoring.",
+            "kor": "{NAME}이(가) 텅 빈 교실에서 들은 것은 선생님의 코 고는 소리였다.",
+            "tip": "👉 What절이 문장의 주어! '{NAME}이 들은 것' = <b>what</b>.",
+            "img": "a student tiptoeing into a dark classroom to find a teacher napping and snoring with Z letters floating",
+            "scene": "😴💤🏫",
+            "quiz": {
+              "sentence": "The ghost stole ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} hid in the locker.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, hid의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "[What] scared {NAME} the most was the math test, not the ghost.",
+            "kor": "{NAME}을(를) 가장 무섭게 한 것은 귀신이 아니라 수학 시험이었다.",
+            "tip": "👉 What절이 문장의 주어! '{NAME}을 가장 무섭게 한 것' = <b>what</b>.",
+            "img": "a student more scared of a math test paper than the cute ghost beside them",
+            "scene": "📝😱👻",
+            "quiz": {
+              "sentence": "( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the sleepy ghost wants is a warm blanket.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, wants의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "The janitor gave {NAME} [what] he found under the stage: a report card from 1998.",
+            "kor": "관리인 아저씨는 무대 아래에서 찾은 것, 바로 1998년 성적표를 {NAME}에게 주었다.",
+            "tip": "👉 '그가 무대 아래에서 찾은 것' → <b>what</b>!",
+            "img": "a friendly school janitor handing a dusty old report card to a surprised student",
+            "scene": "🧹📜😲",
+            "quiz": {
+              "sentence": "This old photo is ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} found in the attic.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, found의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} wrote down [what] the ghost whispered: tomorrow's test answers.",
+            "kor": "{NAME}은(는) 귀신이 속삭인 것, 바로 내일 시험 답을 받아 적었다.",
+            "tip": "👉 '귀신이 속삭인 것' → <b>what</b>! whispered 뒤 목적어가 비었어요.",
+            "img": "a student secretly writing in a notebook while a cute ghost whispers in their ear",
+            "scene": "📝👻🤫",
+            "quiz": {
+              "sentence": "{NAME} couldn't eat ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the ghost cooked: invisible ramen.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, cooked의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
             }
           }
         ]
       },
       {
-        id: 'space', name: '우주 대전쟁', flavor: '방귀 추진 UFO맛', icon: '🚀', color: '#00a8e8',
-        templates: [
+        "id": "space",
+        "name": "우주 대전쟁",
+        "flavor": "방귀 추진 UFO맛",
+        "icon": "🚀",
+        "color": "#00a8e8",
+        "templates": [
           {
-            eng: "{NAME} is the crazy alien [who] conquered the galaxy with a single green onion.",
-            kor: "{NAME}은(는) 대파 한 뿌리로 은하계를 평정한 미친 외계인이다.",
-            tip: "👉 선행사 'the crazy alien'(외계인=사람 취급)을 꾸미는 주격 관계대명사 <b>who</b>!",
-            img: "a crazy cute alien conquering the galaxy holding a single giant green onion like a sword among planets",
-            scene: "👽🧅🌌",
-            quiz: {
-              sentence: "{NAME} stole a UFO ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) uses farts as hyper-speed fuel.",
-              options: ["which", "who", "whose"], answerIndex: 0,
-              explanation: "UFO(사물)가 방귀를 연료로 쓰므로, 사물 주격 관계대명사 <b>which</b>가 정답입니다!"
+            "eng": "{NAME} is the brave alien [who] conquered the galaxy with a single green onion.",
+            "kor": "{NAME}은(는) 대파 한 뿌리로 은하계를 평정한 용감한 외계인이다.",
+            "tip": "👉 선행사 'the brave alien'(외계인=사람 취급)을 꾸미는 주격 관계대명사 <b>who</b>!",
+            "img": "a brave cute alien conquering the galaxy holding a single giant green onion like a sword among planets",
+            "scene": "👽🧅🌌",
+            "quiz": {
+              "sentence": "The astronaut ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) landed on Mars left her lunch on Earth.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The astronaut'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "{NAME} stole a UFO [which] uses farts as hyper-speed fuel.",
-            kor: "{NAME}은(는) 방귀를 초고속 연료로 뿜으며 날아가는 UFO를 훔쳤다.",
-            tip: "👉 선행사 'a UFO'(사물) 뒤에 동사가 오므로 주격 관계대명사 <b>which</b>!",
-            img: "a student piloting a stolen flying saucer UFO zooming at hyper speed pushed by funny green gas clouds",
-            scene: "🛸💨⚡",
-            quiz: {
-              sentence: "{NAME} punched a space monster ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) face looks like a squished potato.",
-              options: ["who", "which", "whose"], answerIndex: 2,
-              explanation: "우주 괴물'의(whose)' 얼굴(face)이므로 소유격 관계대명사 <b>whose</b>가 정답!"
+            "eng": "{NAME} stole a UFO [which] uses farts as hyper-speed fuel.",
+            "kor": "{NAME}은(는) 방귀를 초고속 연료로 쓰는 UFO를 훔쳤다.",
+            "tip": "👉 선행사 'a UFO'(사물) 뒤에 동사가 오므로 주격 관계대명사 <b>which</b>!",
+            "img": "a student piloting a stolen flying saucer UFO zooming at hyper speed pushed by funny green gas clouds",
+            "scene": "🛸💨⚡",
+            "quiz": {
+              "sentence": "{NAME} visited a planet ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) sky is always pink.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'행성의 하늘(sky)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
             }
           },
           {
-            eng: "{NAME} punched a space monster [whose] face looks like a squished potato.",
-            kor: "{NAME}은(는) 얼굴이 짓눌린 삶은 감자처럼 생겼던 우주 괴물에게 명치 자국을 남겼다.",
-            tip: "👉 우주 괴물의(whose) 얼굴! 소유를 나타내므로 <b>whose</b>를 씁니다.",
-            img: "a student throwing a comic punch at a silly space monster whose face looks like a squished potato, pow effect",
-            scene: "👊👾🥔",
-            quiz: {
-              sentence: "Do you know ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} did to the crazy alien with a green onion?",
-              options: ["that", "what", "which"], answerIndex: 1,
-              explanation: "선행사 없이 '{NAME}이 파로 한 짓(것)'을 뜻하므로 <b>what</b>이 정답입니다!"
+            "eng": "{NAME} tickled a space monster [whose] belly button glows in the dark.",
+            "kor": "{NAME}은(는) 배꼽이 어둠 속에서 빛나는 우주 괴물을 간지럽혔다.",
+            "tip": "👉 우주 괴물의(whose) 배꼽! 명사(belly button) 앞이니까 소유격 <b>whose</b>를 씁니다.",
+            "img": "a student tickling a giant friendly giggling space monster whose belly button glows in the dark",
+            "scene": "🤭👾✨",
+            "quiz": {
+              "sentence": "The rocket ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} built runs on banana milk.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The rocket'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} rescued an astronaut [who] locked his keys inside the spaceship.",
+            "kor": "{NAME}은(는) 우주선 안에 열쇠를 두고 문을 잠가 버린 우주 비행사를 구했다.",
+            "tip": "👉 선행사 'an astronaut'(사람) → <b>who</b>!",
+            "img": "an embarrassed astronaut on the moon pointing at keys inside a locked spaceship window, a student coming to help",
+            "scene": "🧑‍🚀🔑🌕",
+            "quiz": {
+              "sentence": "The captain ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) drives the spaceship doesn't have a driver's license.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The captain'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The scientist [who] found the new planet named it after {NAME}'s cat.",
+            "kor": "새 행성을 발견한 과학자는 그 행성에 {NAME}네 고양이 이름을 붙였다.",
+            "tip": "👉 주어 'The scientist'(사람)를 꾸미는 <b>who</b>! 진짜 동사는 named.",
+            "img": "a happy scientist pointing at a new planet on a telescope screen that looks like a cat face",
+            "scene": "🔭🪐🐱",
+            "quiz": {
+              "sentence": "{NAME} waved to a boy ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) was riding a comet to school.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a boy'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} met a pilot [who] has visited 99 planets but still gets carsick.",
+            "kor": "{NAME}은(는) 행성 99곳을 다녀왔는데 아직도 차멀미를 하는 조종사를 만났다.",
+            "tip": "👉 선행사 'a pilot'(사람) → <b>who</b>!",
+            "img": "a cool space pilot covered in planet badges looking green and dizzy in the back seat of a small car",
+            "scene": "👩‍✈️🪐🤢",
+            "quiz": {
+              "sentence": "The girl ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) fixed the robot with a hairpin won a gold medal.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The girl'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} drank a juice [which] made their hair glow like a star.",
+            "kor": "{NAME}은(는) 머리카락이 별처럼 빛나게 만드는 주스를 마셨다.",
+            "tip": "👉 선행사 'a juice'(사물) → <b>which</b>!",
+            "img": "a student with glowing star-like hair after drinking a sparkly space juice",
+            "scene": "🧃⭐💇",
+            "quiz": {
+              "sentence": "The spaceship ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} drives can only fly backwards.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The spaceship'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "Aliens sent {NAME} a message [which] said, \"Please send more ramen.\"",
+            "kor": "외계인들은 {NAME}에게 '라면 좀 더 보내 주세요.'라는 메시지를 보냈다.",
+            "tip": "👉 선행사 'a message'(사물) → <b>which</b>!",
+            "img": "cute aliens sending a glowing message with a picture of ramen noodles to Earth",
+            "scene": "👽📡🍜",
+            "quiz": {
+              "sentence": "This is the planet ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) smells like popcorn.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'the planet'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} found a star [which] posts a selfie every night.",
+            "kor": "{NAME}은(는) 매일 밤 셀카를 올리는 별을 발견했다.",
+            "tip": "👉 선행사 'a star'(사물) → <b>which</b>!",
+            "img": "a smiling cartoon star taking a selfie with a phone in deep space",
+            "scene": "⭐🤳🌌",
+            "quiz": {
+              "sentence": "The moon rock ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} brought home started to dance.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The moon rock'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} landed on a planet [whose] rivers are full of cola.",
+            "kor": "{NAME}은(는) 강이 콜라로 가득한 행성에 착륙했다.",
+            "tip": "👉 행성의(whose) 강! 명사 rivers 앞에 <b>whose</b>.",
+            "img": "a student landing on a planet with fizzy brown cola rivers",
+            "scene": "🪐🥤🌊",
+            "quiz": {
+              "sentence": "The alien ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) spaceship broke down borrowed {NAME}'s bike.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'외계인의 우주선(spaceship)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "The captain [whose] robot arm makes coffee invited {NAME} to the bridge.",
+            "kor": "로봇 팔로 커피를 만드는 선장은 {NAME}을(를) 조종실로 초대했다.",
+            "tip": "👉 선장의(whose) 로봇 팔! 주어 The captain을 꾸미는 <b>whose</b>절.",
+            "img": "a space captain with a robot arm making coffee on a spaceship bridge",
+            "scene": "🦾☕🚀",
+            "quiz": {
+              "sentence": "{NAME} found a planet ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) moons are shaped like donuts.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'행성의 위성들(moons)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} adopted a space puppy [whose] ears work like rockets.",
+            "kor": "{NAME}은(는) 귀가 로켓처럼 작동하는 우주 강아지를 입양했다.",
+            "tip": "👉 우주 강아지의(whose) 귀! 명사 ears 앞에 <b>whose</b>.",
+            "img": "a cute space puppy flying with rocket-powered ears",
+            "scene": "🐶🚀👂",
+            "quiz": {
+              "sentence": "The robot ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) battery died fell asleep on the moon.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'로봇의 배터리(battery)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} is the first human [that] won a dance battle against aliens.",
+            "kor": "{NAME}은(는) 외계인과의 댄스 배틀에서 이긴 최초의 인간이다.",
+            "tip": "👉 'the first'가 붙은 선행사 → <b>that</b>을 즐겨 써요!",
+            "img": "a student winning a dance battle against cool aliens on a spaceship stage",
+            "scene": "🕺👽🏆",
+            "quiz": {
+              "sentence": "This is the biggest planet ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) we have ever found, and it smells like feet.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the biggest planet'에 최상급·서수·the only가 붙어 있으면 <b>that</b>을 즐겨 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "The aliens borrowed everything [that] was in {NAME}'s refrigerator.",
+            "kor": "외계인들은 {NAME}의 냉장고에 있던 모든 것을 빌려 갔다.",
+            "tip": "👉 'everything' 선행사 → <b>that</b>!",
+            "img": "cute aliens floating food out of a kitchen refrigerator with a tractor beam",
+            "scene": "👽🧊🍗",
+            "quiz": {
+              "sentence": "{NAME} saw an astronaut and a robot ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) were playing chess on the moon.",
+              "options": [
+                "that",
+                "who",
+                "which"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'an astronaut and a robot'처럼 사람과 사물·동물이 섞여 있으면 <b>that</b>만 쓸 수 있어요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "This is the only spaceship [that] runs on kimchi.",
+            "kor": "이것은 김치로 움직이는 유일한 우주선이다.",
+            "tip": "👉 'the only'가 붙은 선행사 → <b>that</b>!",
+            "img": "a spaceship fueled by a big jar of kimchi blasting off",
+            "scene": "🚀🥬🔥",
+            "quiz": {
+              "sentence": "Everything ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the black hole swallowed came back as pudding.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'Everything'처럼 all·every·-thing이 붙으면 <b>that</b>을 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "The UFO picked up a farmer and a cow [that] were watching the stars.",
+            "kor": "UFO는 별을 보고 있던 농부와 소를 태워 갔다.",
+            "tip": "👉 선행사가 사람(a farmer) + 동물(a cow) → <b>that</b>!",
+            "img": "a friendly UFO beam lifting a surprised farmer and a cow under a starry sky",
+            "scene": "🛸👨‍🌾🐄",
+            "quiz": {
+              "sentence": "It was the funniest alien ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} had ever met.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the funniest alien'에 최상급·서수·the only가 붙어 있으면 <b>that</b>을 즐겨 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "[What] {NAME} saw through the telescope was a giant space hamster.",
+            "kor": "{NAME}이(가) 망원경으로 본 것은 거대한 우주 햄스터였다.",
+            "tip": "👉 What절이 문장의 주어! '{NAME}이 본 것' = <b>what</b>.",
+            "img": "a giant cute hamster floating in space seen through a telescope",
+            "scene": "🔭🐹🌌",
+            "quiz": {
+              "sentence": "The alien loved ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} cooked for dinner: instant noodles.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, cooked의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "The aliens copied [what] {NAME} did on the dance floor.",
+            "kor": "외계인들은 {NAME}이(가) 무대에서 한 것을 따라 했다.",
+            "tip": "👉 '{NAME}이 한 것' → <b>what</b>! did의 목적어가 비어 있어요.",
+            "img": "cute aliens copying a student's dance moves on a disco floor in space",
+            "scene": "👽🪩🕺",
+            "quiz": {
+              "sentence": "( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} needs now is more rocket fuel.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, needs의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "[What] the aliens wanted from Earth was not gold but tteokbokki.",
+            "kor": "외계인들이 지구에서 원한 것은 금이 아니라 떡볶이였다.",
+            "tip": "👉 What절이 문장의 주어! '외계인들이 원한 것' = <b>what</b>.",
+            "img": "cute aliens ignoring a pile of gold and happily eating tteokbokki from a street food cart",
+            "scene": "👽🌶️💰",
+            "quiz": {
+              "sentence": "This photo is ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the rover sent from Mars.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, sent의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "A green onion is [what] {NAME} used to defeat the space monster.",
+            "kor": "대파는 {NAME}이(가) 우주 괴물을 물리치는 데 쓴 것이다.",
+            "tip": "👉 '{NAME}이 사용한 것' → <b>what</b>!",
+            "img": "a student defeating a silly space monster by swinging a giant green onion",
+            "scene": "🧅⚔️👾",
+            "quiz": {
+              "sentence": "The astronaut lost ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) she packed for the trip.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, packed의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
             }
           }
         ]
       },
       {
-        id: 'idol', name: '아이돌 오디션', flavor: '돌고래 초음파맛', icon: '🎤', color: '#f5b800',
-        templates: [
+        "id": "idol",
+        "name": "아이돌 오디션",
+        "flavor": "돌고래 초음파맛",
+        "icon": "🎤",
+        "color": "#f5b800",
+        "templates": [
           {
-            eng: "{NAME} showed the judges [what] they had practiced for 10 years: breaking 100 watermelons with their head.",
-            kor: "{NAME}은(는) 10년 동안 연습해 온 것, 바로 머리로 수박 100통 깨기를 심사위원들에게 보여 주었다.",
-            tip: "👉 선행사 없이 '~하는 것(10년 동안 연습해 온 것)'으로 해석될 때는 <b>what</b>! practiced 뒤에 목적어가 비어 있죠?",
-            img: "an idol audition stage where a determined student smashes watermelons with a headbutt in front of shocked judges",
-            scene: "🍉💥🎤",
-            quiz: {
-              sentence: "Fans worship {NAME} ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) twerks beautifully while singing the national anthem.",
-              options: ["who", "which", "whose"], answerIndex: 0,
-              explanation: "선행사 '{NAME}'(사람)이 애국가 부르며 트월킹을 추므로 주격 <b>who</b>가 정답!"
+            "eng": "{NAME} showed the judges [what] they had practiced for 10 years: breaking 100 watermelons with their head.",
+            "kor": "{NAME}은(는) 10년 동안 연습해 온 것, 바로 머리로 수박 100통 깨기를 심사위원들에게 보여 주었다.",
+            "tip": "👉 선행사 없이 '~하는 것(10년 동안 연습해 온 것)'으로 해석될 때는 <b>what</b>! practiced 뒤에 목적어가 비어 있죠?",
+            "img": "an idol audition stage where a determined student smashes watermelons with a headbutt in front of shocked judges",
+            "scene": "🍉💥🎤",
+            "quiz": {
+              "sentence": "The trainee ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) practices 15 hours a day is {NAME}.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The trainee'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "Fans worship {NAME} [who] twerks beautifully while singing the national anthem.",
-            kor: "수만 명의 팬들은 애국가를 부르며 경건하고 아름답게 트월킹을 추는 {NAME}을(를) 숭배한다.",
-            tip: "👉 선행사 사람({NAME})을 꾸미는 주격 관계대명사 <b>who</b>!",
-            img: "a kpop idol student dancing energetically and singing on a sparkling stage while adoring fans wave light sticks",
-            scene: "🎤💃🎶",
-            quiz: {
-              sentence: "{NAME} joined a weird group ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) members only speak in dolphin sounds.",
-              options: ["which", "who", "whose"], answerIndex: 2,
-              explanation: "이상한 그룹'의(whose)' 멤버들(members)이므로 소유격 관계대명사 <b>whose</b>가 정답!"
+            "eng": "{NAME} is the singer [who] sings the national anthem while doing a handstand.",
+            "kor": "{NAME}은(는) 물구나무를 선 채로 애국가를 부르는 가수이다.",
+            "tip": "👉 선행사 'the singer'(사람)를 꾸미는 주격 관계대명사 <b>who</b>!",
+            "img": "a student singing on stage while doing a handstand, fans cheering with light sticks",
+            "scene": "🤸🎤🎶",
+            "quiz": {
+              "sentence": "The fans ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} met at the airport cried with joy.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The fans'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
             }
           },
           {
-            eng: "{NAME} joined a weird group [whose] members only speak in alien dolphin sounds.",
-            kor: "{NAME}은(는) 멤버들이 외계 돌고래 초음파 소리로만 대화하는 이상한 그룹에 합류했다.",
-            tip: "👉 그 이상한 그룹의(whose) 멤버들! 명사 앞에는 소유격 <b>whose</b>를 씁니다.",
-            img: "a weird idol group on stage whose members talk only in dolphin sounds, cute dolphins and music notes floating around",
-            scene: "🐬🎶👯",
-            quiz: {
-              sentence: "The agency finally released ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} recorded in the restroom.",
-              options: ["what", "which", "who"], answerIndex: 0,
-              explanation: "선행사 없이 '{NAME}이 화장실에서 녹음한 것'을 의미하므로 <b>what</b>이 정답입니다!"
+            "eng": "{NAME} joined a weird group [whose] members only speak in alien dolphin sounds.",
+            "kor": "{NAME}은(는) 멤버들이 외계 돌고래 초음파 소리로만 대화하는 이상한 그룹에 합류했다.",
+            "tip": "👉 그 이상한 그룹의(whose) 멤버들! 명사 앞에는 소유격 <b>whose</b>를 씁니다.",
+            "img": "a weird idol group on stage whose members talk only in dolphin sounds, cute dolphins and music notes floating around",
+            "scene": "🐬🎶👯",
+            "quiz": {
+              "sentence": "{NAME} joined a band ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) drummer plays with chopsticks.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'밴드의 드러머(drummer)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} met a manager [who] sleeps with a microphone.",
+            "kor": "{NAME}은(는) 마이크를 안고 자는 매니저를 만났다.",
+            "tip": "👉 선행사 'a manager'(사람) → <b>who</b>!",
+            "img": "a manager sleeping in bed hugging a microphone",
+            "scene": "😴🎤🛏️",
+            "quiz": {
+              "sentence": "The idol ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) won the award thanked {NAME}'s grandma first.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The idol'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The judge [who] hates every song gave {NAME} a perfect score.",
+            "kor": "모든 노래를 싫어하는 그 심사위원이 {NAME}에게 만점을 줬다.",
+            "tip": "👉 주어 'The judge'(사람)를 꾸미는 <b>who</b>! 진짜 동사는 gave.",
+            "img": "a grumpy audition judge holding up a perfect score card, surprised",
+            "scene": "🧑‍⚖️💯😲",
+            "quiz": {
+              "sentence": "{NAME} is a singer ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) can hold a high note for 3 minutes.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a singer'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} has a fan [who] brings kimchi to every concert.",
+            "kor": "{NAME}에게는 콘서트마다 김치를 가져오는 팬이 있다.",
+            "tip": "👉 선행사 'a fan'(사람) → <b>who</b>!",
+            "img": "an excited fan holding a jar of kimchi at a concert",
+            "scene": "🙋🫙🎤",
+            "quiz": {
+              "sentence": "The dancer ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) slipped on stage turned it into a new dance move.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'The dancer'는 사람이에요. 사람 선행사 → <b>who</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} sang a song [which] was so high that every dog in the city started howling.",
+            "kor": "{NAME}은(는) 너무 높아서 도시의 모든 개가 따라 울기 시작한 노래를 불렀다.",
+            "tip": "👉 선행사 'a song'(사물) + was → <b>which</b>!",
+            "img": "a singer hitting a super high note while cute dogs all over the city howl along",
+            "scene": "🎤🐶🏙️",
+            "quiz": {
+              "sentence": "The stage ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} danced on suddenly started to spin.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The stage'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The agency gave {NAME} a microphone [which] turns every song into trot.",
+            "kor": "소속사는 {NAME}에게 모든 노래를 트로트로 바꾸는 마이크를 주었다.",
+            "tip": "👉 선행사 'a microphone'(사물) → <b>which</b>!",
+            "img": "a sparkly golden microphone with musical notes swirling around it",
+            "scene": "🎤✨🎶",
+            "quiz": {
+              "sentence": "This is the album ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) sold 10 million copies in a day.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'the album'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} wore a jacket [which] lights up when the beat drops.",
+            "kor": "{NAME}은(는) 비트가 터질 때 불이 들어오는 재킷을 입었다.",
+            "tip": "👉 선행사 'a jacket'(사물) → <b>which</b>!",
+            "img": "a performer wearing a glowing LED jacket on a concert stage",
+            "scene": "🧥💡🔊",
+            "quiz": {
+              "sentence": "{NAME} bought a light stick ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) shoots confetti.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'a light stick'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "The fans made a banner [which] was as long as a soccer field.",
+            "kor": "팬들은 축구장만큼 긴 현수막을 만들었다.",
+            "tip": "👉 선행사 'a banner'(사물) → <b>which</b>!",
+            "img": "fans holding a super long banner stretching across a soccer field",
+            "scene": "🏳️📏⚽",
+            "quiz": {
+              "sentence": "The dance ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} made in the bathroom went viral overnight.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 1,
+              "explanation": "선행사 'The dance'는 사물·동물이에요. 사물·동물 선행사 → <b>which</b>가 정답입니다!"
+            }
+          },
+          {
+            "eng": "{NAME} trained with a dancer [whose] arms can bend like noodles.",
+            "kor": "{NAME}은(는) 팔이 국수처럼 휘어지는 댄서와 연습했다.",
+            "tip": "👉 댄서의(whose) 팔! 명사 arms 앞에 <b>whose</b>.",
+            "img": "a flexible cartoon dancer waving noodle-like arms in a dance practice room",
+            "scene": "🩰🍜🤸",
+            "quiz": {
+              "sentence": "The singer ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) voice broke a window said sorry.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'가수의 목소리(voice)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} found a pigeon [whose] YouTube channel has 3 million subscribers.",
+            "kor": "{NAME}은(는) 유튜브 채널 구독자가 300만 명인 비둘기를 발견했다.",
+            "tip": "👉 비둘기의(whose) 채널! 명사 YouTube channel 앞에 <b>whose</b>.",
+            "img": "a cool pigeon wearing sunglasses filming a video with a camera and a big subscriber counter",
+            "scene": "🕊️📹💯",
+            "quiz": {
+              "sentence": "{NAME} met a rapper ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) dog can also rap.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'래퍼의 강아지(dog)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} visited a studio [whose] walls are covered in gum.",
+            "kor": "{NAME}은(는) 벽이 껌으로 뒤덮인 녹음실을 방문했다.",
+            "tip": "👉 녹음실의(whose) 벽! 명사 walls 앞에 <b>whose</b>.",
+            "img": "a colorful recording studio whose walls are covered with chewing gum",
+            "scene": "🎙️🫧🧱",
+            "quiz": {
+              "sentence": "The group ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) leader is a penguin is on TV.",
+              "options": [
+                "who",
+                "which",
+                "whose"
+              ],
+              "answerIndex": 2,
+              "explanation": "'그룹의 리더(leader)'처럼 소유 관계예요. 빈칸 바로 뒤에 명사가 오면 → <b>whose</b>가 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} is the youngest trainee [that] has ever debuted.",
+            "kor": "{NAME}은(는) 지금까지 데뷔한 연습생 중 가장 어린 연습생이다.",
+            "tip": "👉 최상급(the youngest)이 붙은 선행사 → <b>that</b>!",
+            "img": "a young trainee debuting on a big stage with confetti",
+            "scene": "🌟🎉🎤",
+            "quiz": {
+              "sentence": "This is the best song ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} has ever written in the shower.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the best song'에 최상급·서수·the only가 붙어 있으면 <b>that</b>을 즐겨 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "Everything [that] {NAME} touches turns into a hit song.",
+            "kor": "{NAME}이(가) 손대는 모든 것은 히트곡이 된다.",
+            "tip": "👉 'Everything' 선행사 → <b>that</b>! 진짜 동사는 turns.",
+            "img": "a student touching everyday objects that turn into glowing music notes and gold records",
+            "scene": "✨🎵🏆",
+            "quiz": {
+              "sentence": "{NAME} danced with a girl and a robot ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) were on the same team.",
+              "options": [
+                "that",
+                "who",
+                "which"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'a girl and a robot'처럼 사람과 사물·동물이 섞여 있으면 <b>that</b>만 쓸 수 있어요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "It was the loudest concert [that] the city had ever heard.",
+            "kor": "그것은 그 도시가 들어 본 가장 시끄러운 콘서트였다.",
+            "tip": "👉 최상급(the loudest) 선행사 → <b>that</b>!",
+            "img": "a huge loud concert with sound waves shaking a whole city",
+            "scene": "🔊🏙️🎆",
+            "quiz": {
+              "sentence": "All the cookies ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the fans sent were shaped like {NAME}'s face.",
+              "options": [
+                "that",
+                "what",
+                "whose"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'All the cookies'처럼 all·every·-thing이 붙으면 <b>that</b>을 써요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "The only dance [that] {NAME} can't do is the chicken dance.",
+            "kor": "{NAME}이(가) 못 추는 유일한 춤은 치킨 댄스이다.",
+            "tip": "👉 'The only'가 붙은 선행사 → <b>that</b>!",
+            "img": "a student trying a silly chicken dance and laughing with friends",
+            "scene": "🐔💃😅",
+            "quiz": {
+              "sentence": "The judges loved the singer and the parrot ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) performed together.",
+              "options": [
+                "that",
+                "who",
+                "which"
+              ],
+              "answerIndex": 0,
+              "explanation": "선행사 'the singer and the parrot'처럼 사람과 사물·동물이 섞여 있으면 <b>that</b>만 쓸 수 있어요! (what은 선행사가 없을 때, whose는 뒤에 명사가 올 때만 써요)"
+            }
+          },
+          {
+            "eng": "[What] made {NAME} famous was a sneeze during the live show.",
+            "kor": "{NAME}을(를) 유명하게 만든 것은 생방송 중의 재채기였다.",
+            "tip": "👉 What절이 문장의 주어! '{NAME}을 유명하게 만든 것' = <b>what</b>.",
+            "img": "a singer sneezing hugely on a live TV show stage with glitter flying",
+            "scene": "🤧📺⭐",
+            "quiz": {
+              "sentence": "The fans loved ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) {NAME} wore on stage: a pizza costume.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, wore의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "[What] {NAME} posted at 2 in the morning became the school's official song.",
+            "kor": "{NAME}이(가) 새벽 2시에 올린 것이 학교 공식 노래가 되었다.",
+            "tip": "👉 What절이 문장의 주어! '{NAME}이 새벽에 올린 것' = <b>what</b>.",
+            "img": "a student in pajamas posting a song on a phone at night, the next day the whole school singing it",
+            "scene": "🌙📱🎶",
+            "quiz": {
+              "sentence": "( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the leader said surprised everyone.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, said의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
+            }
+          },
+          {
+            "eng": "{NAME} sang [what] the fans requested: the school song in rap style.",
+            "kor": "{NAME}은(는) 팬들이 신청한 것, 바로 교가를 랩 버전으로 불렀다.",
+            "tip": "👉 '팬들이 신청한 것' → <b>what</b>!",
+            "img": "a student rapping on stage while fans cheer with signs",
+            "scene": "🎤🏫🔥",
+            "quiz": {
+              "sentence": "A golden microphone was ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) the winner received.",
+              "options": [
+                "what",
+                "which",
+                "that"
+              ],
+              "answerIndex": 0,
+              "explanation": "빈칸 앞에 꾸며 줄 선행사가 없고, received의 목적어가 비어 있어요. '~하는 것' → <b>what</b>이 정답!"
             }
           }
         ]
