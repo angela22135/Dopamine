@@ -1141,7 +1141,7 @@
               <div class="scene-emoji" id="sceneEmoji">🎨</div>
               <div class="scene-msg" id="sceneMsg">AI가 장면을 그리는 중...</div>
             </div>
-            <div class="scene-credit">🎨 AI 생성 이미지</div>
+            <div class="scene-credit">🎨 AI로 그린 그림</div>
           </div>
 
           <div class="tooltip-hint">
@@ -1235,9 +1235,9 @@
     const IMAGE_CONFIG = {
       // 미리 저장한 이미지 폴더(예: 'images'). 파일 이름: 테마id-번호.jpg (예: zombie-1.jpg)
       // 비워 두면 이 단계를 건너뜁니다.
-      localFolder: '',
+      localFolder: 'images',
       // true면 Pollinations.ai 무료 AI로 장면 그림을 생성합니다.
-      useAI: true,
+      useAI: false,
       timeoutMs: 30000,
       styleSuffix: ', cute colorful cartoon sticker illustration, kid-friendly, bright pink and neon colors, thick outlines, no text, no letters'
     };
@@ -3794,7 +3794,7 @@
       img.removeAttribute('src');
       img.alt = item.engPlain;
       emoji.textContent = item.tpl.scene || item.themeIcon;
-      msg.textContent = '🎨 AI가 장면을 그리는 중...';
+      msg.textContent = '🎨 그림 불러오는 중...';
 
       const sources = [];
       if (IMAGE_CONFIG.localFolder) {
