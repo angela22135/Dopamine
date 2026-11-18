@@ -108,6 +108,8 @@
     }
     .ticker-track span { margin: 0 18px; }
     .ticker-track b { background: var(--ink); color: var(--neon-yellow); padding: 2px 8px; border-radius: 6px; }
+    body.solving .ticker { display: none; }
+    body.solving .top-bar { margin-top: 14px; }
     @keyframes tick {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
@@ -3752,6 +3754,7 @@
       document.getElementById('step1Showcase').style.display = 'none';
       document.getElementById('step3Quiz').style.display = 'none';
       document.getElementById('step2Sentence').style.display = 'flex';
+      document.body.classList.add('solving');
 
       document.getElementById('sentenceThemeTag').innerHTML = `<span>${currentItem.themeIcon}</span> ${currentItem.themeName} 캔 개봉!`;
       document.getElementById('displayEngSentence').innerHTML = currentItem.engHtml;
@@ -3993,6 +3996,7 @@
       document.getElementById('step3Quiz').style.display = 'none';
       document.getElementById('step2Sentence').style.display = 'none';
       document.getElementById('step1Showcase').style.display = 'block';
+      document.body.classList.remove('solving');
       imageLoadToken++;
       document.getElementById('vendingMachine').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
