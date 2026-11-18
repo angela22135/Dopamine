@@ -167,7 +167,7 @@
 
     @media (min-width: 760px) and (max-width: 1139px) {
       .layout { grid-template-columns: 1fr 1fr; }
-      .vending-machine { grid-column: 1 / -1; justify-self: center; }
+      .machine-stage { grid-column: 1 / -1; justify-self: center; }
       .side-left { order: 2; }
       .side-right { order: 3; }
     }
@@ -176,22 +176,25 @@
       .side-right { order: 3; }
     }
     @media (min-width: 1140px) {
-      .layout { grid-template-columns: minmax(250px, 1fr) minmax(0, 620px) minmax(250px, 1fr); align-items: start; }
+      .layout { grid-template-columns: minmax(230px, 300px) minmax(0, 680px) minmax(230px, 300px); justify-content: center; align-items: start; gap: 28px; }
       .side-left, .side-right { position: sticky; top: 16px; }
     }
 
     /* ---------- 사이드 패널 ---------- */
     .panel {
-      background: rgba(25, 5, 36, 0.82);
-      border: 3px solid var(--neon-cyan);
-      border-radius: 24px;
-      padding: 16px;
+      background: rgba(40, 6, 40, 0.55);
+      border: 2px solid rgba(255, 255, 255, 0.22);
+      border-radius: 22px;
+      padding: 14px;
       color: #fff;
-      box-shadow: 0 0 16px rgba(0, 243, 255, 0.35), 0 12px 24px rgba(0,0,0,0.3);
-      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+      backdrop-filter: blur(8px);
     }
-    .panel.yellow { border-color: var(--neon-yellow); box-shadow: 0 0 16px rgba(255, 242, 0, 0.35), 0 12px 24px rgba(0,0,0,0.3); }
-    .panel.lime { border-color: var(--neon-lime); box-shadow: 0 0 16px rgba(0, 255, 102, 0.3), 0 12px 24px rgba(0,0,0,0.3); }
+    .panel.yellow { border-top: 4px solid rgba(255, 242, 0, 0.7); }
+    .panel.lime { border-top: 4px solid rgba(0, 255, 102, 0.6); }
+    .side-left .panel:first-child, .side-right .panel:first-child { border-top: 4px solid rgba(0, 243, 255, 0.65); }
+    .side-left, .side-right { opacity: 0.94; }
+    .side-left .cheat-card { padding: 7px 9px; }
     .panel-title {
       font-size: 16px;
       font-weight: 900;
@@ -319,6 +322,15 @@
       transition: transform 0.1s;
     }
     .panel-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #b0a4b8; }
+    .rank-big { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+    .rank-box { background: rgba(255,255,255,0.1); border-radius: 14px; padding: 10px 6px; text-align: center; }
+    .rank-box .v { font-size: 26px; font-weight: 900; color: var(--neon-yellow); line-height: 1.1; }
+    .rank-box .v small { font-size: 12px; color: #ffd1e6; }
+    .rank-box .k { font-size: 11px; font-weight: 800; color: #ffd1e6; margin-top: 2px; }
+    .rank-note { font-size: 12px; font-weight: 700; color: #ffd1e6; text-align: center; line-height: 1.5; }
+    .rank-top { margin-top: 8px; display: flex; flex-direction: column; gap: 4px; }
+    .rank-top div { display: flex; justify-content: space-between; font-size: 12px; font-weight: 800; background: rgba(255,255,255,0.06); padding: 5px 10px; border-radius: 8px; }
+    .rank-top div.me { background: rgba(255, 242, 0, 0.2); color: var(--neon-yellow); }
     .sync-status {
       margin-top: 10px;
       font-size: 12px;
@@ -331,19 +343,100 @@
     .sync-status.on { color: var(--neon-lime); }
     .sync-status.off { color: #ffd1e6; }
 
+    /* ---------- 자판기 무대 ---------- */
+    .machine-stage {
+      position: relative;
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 6px;
+    }
+    .machine-stage::before {
+      content: "";
+      position: absolute;
+      inset: -60px -80px 40px;
+      background: radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 240, 120, 0.25) 30%, transparent 65%);
+      pointer-events: none;
+      z-index: -1;
+      animation: spotlight 3s ease-in-out infinite;
+    }
+    @keyframes spotlight { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+
+    .machine-sign {
+      position: relative;
+      z-index: 2;
+      margin-bottom: -14px;
+      background: #14031c;
+      border: 4px solid #fff;
+      border-radius: 18px 18px 8px 8px;
+      padding: 8px 26px 10px;
+      text-align: center;
+      box-shadow: 0 0 0 4px #ff0077, 0 0 24px #ff0077, 0 0 48px rgba(255, 0, 119, 0.6);
+      transform: rotate(-2deg);
+      animation: signSwing 3.5s ease-in-out infinite;
+    }
+    @keyframes signSwing { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+    .sign-text {
+      font-size: clamp(22px, 4.6vw, 34px);
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #fff;
+      text-shadow: 0 0 6px #fff, 0 0 14px var(--neon-cyan), 0 0 28px var(--neon-cyan);
+      animation: flicker 4s infinite;
+      white-space: nowrap;
+    }
+    .sign-sub { font-size: 11px; font-weight: 900; color: var(--neon-yellow); letter-spacing: 4px; text-shadow: 0 0 6px var(--neon-yellow); }
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.35; }
+    }
+
+    .machine-badge {
+      position: absolute;
+      top: 70px;
+      right: -14px;
+      z-index: 5;
+      width: 86px; height: 86px;
+      border-radius: 50%;
+      background: var(--neon-yellow);
+      color: var(--ink);
+      border: 4px dashed #ff0077;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      font-weight: 900;
+      line-height: 1.05;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+      animation: badgeSpin 6s linear infinite;
+    }
+    .machine-badge b { font-size: 24px; }
+    .machine-badge span { font-size: 11px; }
+    @keyframes badgeSpin { 0% { transform: rotate(-12deg) scale(1); } 50% { transform: rotate(8deg) scale(1.08); } 100% { transform: rotate(-12deg) scale(1); } }
+
+    .machine-feet { display: flex; justify-content: space-between; width: 78%; margin-top: -4px; }
+    .machine-feet span { width: 70px; height: 18px; background: linear-gradient(180deg, #5a1640, #2a0820); border-radius: 0 0 12px 12px; }
+    .machine-floor { width: 92%; height: 22px; margin-top: 2px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,0.45), transparent 70%); }
+
     /* ---------- 자판기 본체 ---------- */
     .vending-machine {
       position: relative;
       width: 100%;
-      max-width: 620px;
-      background: linear-gradient(145deg, #ff3377, #d90057);
-      border: 6px solid #ffccd9;
-      border-radius: 36px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 3px 6px rgba(255, 255, 255, 0.6);
-      padding: 20px;
+      max-width: 680px;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.18) 0, transparent 22px, transparent calc(100% - 22px), rgba(0,0,0,0.28) 100%),
+        linear-gradient(145deg, #ff3d84, #d90057);
+      border: 8px solid #fff;
+      border-radius: 40px;
+      padding: 30px 22px 22px;
       display: flex;
       flex-direction: column;
       gap: 14px;
+      animation: machineGlow 2.4s ease-in-out infinite;
+    }
+    @keyframes machineGlow {
+      0%, 100% { box-shadow: 0 0 0 5px #ff0077, 0 0 30px 6px rgba(0, 243, 255, 0.7), 0 22px 40px rgba(0,0,0,0.45), inset 0 4px 8px rgba(255,255,255,0.6); }
+      50% { box-shadow: 0 0 0 5px #00e0ff, 0 0 46px 12px rgba(255, 0, 170, 0.75), 0 22px 40px rgba(0,0,0,0.45), inset 0 4px 8px rgba(255,255,255,0.6); }
     }
     .led-row { display: flex; justify-content: space-between; padding: 0 10px; }
     .led-row span {
@@ -959,6 +1052,12 @@
     </aside>
 
     <!-- ===== 가운데: 자판기 ===== -->
+    <div class="machine-stage">
+    <div class="machine-sign" aria-hidden="true">
+      <div class="sign-text">DOPAMINE POP!</div>
+      <div class="sign-sub">★ 예문 자판기 · 24시간 영업 ★</div>
+    </div>
+    <div class="machine-badge" aria-hidden="true"><b>120</b><span>개 예문<br>무료!</span></div>
     <main class="vending-machine" id="vendingMachine">
       <div class="led-row" aria-hidden="true">
         <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
@@ -1088,6 +1187,9 @@
 
       <footer class="vending-footer" id="privacyFooter"></footer>
     </main>
+    <div class="machine-feet" aria-hidden="true"><span></span><span></span></div>
+    <div class="machine-floor" aria-hidden="true"></div>
+    </div>
 
     <!-- ===== 오른쪽: 점수 + 기록 ===== -->
     <aside class="side-right">
@@ -1101,6 +1203,11 @@
         </div>
         <div class="gauge-label"><span>⚡ 도파민 게이지</span><span id="gaugeText">0%</span></div>
         <div class="gauge"><div class="gauge-fill" id="gaugeFill"></div></div>
+      </section>
+      <section class="panel" id="rankPanel">
+        <h2 class="panel-title">🏅 오늘의 랭킹</h2>
+        <div id="rankBody"><div class="rank-note">불러오는 중...</div></div>
+        <button class="panel-btn" type="button" onclick="refreshRank(true)">🔄 순위 새로고침</button>
       </section>
       <section class="panel lime">
         <h2 class="panel-title">📒 내 풀이 기록</h2>
@@ -3386,6 +3493,7 @@
       updateStatsUI();
       updateSyncStatus();
       updatePrivacyFooter();
+      refreshRank(false);
       document.getElementById('studentNameInput').addEventListener('keydown', (e) => {
         if (e.key === 'Enter') dispenseCan();
       });
@@ -3877,6 +3985,7 @@
       }
       updateStatsUI(true);
       updateMissions();
+      setTimeout(() => refreshRank(false), 2000);
     }
 
     function resetToVending() {
@@ -4031,6 +4140,54 @@
       const prev = el.textContent;
       el.textContent = text;
       setTimeout(updateSyncStatus, 2500);
+    }
+
+    /* ---------- 오늘의 랭킹 (스프레드시트에서 계산) ---------- */
+    let rankLoading = false;
+    function refreshRank(byUser) {
+      if (byUser) playClickSound();
+      const body = document.getElementById('rankBody');
+      if (!SHEET_CONFIG.url) {
+        body.innerHTML = '<div class="rank-note">선생님이 스프레드시트를 연결하면<br>오늘 참여한 친구들 사이에서 내 순위가 보여요! 🏆</div>';
+        return;
+      }
+      const id = (studentId || document.getElementById('studentIdInput').value || '').trim();
+      if (!id) {
+        body.innerHTML = '<div class="rank-note">학번·이름을 적고 퀴즈를 풀면<br>내 순위가 나타나요! ✍️</div>';
+        return;
+      }
+      if (rankLoading) return;
+      rankLoading = true;
+      fetch(`${SHEET_CONFIG.url}?action=rank&id=${encodeURIComponent(id)}`)
+        .then(r => r.json())
+        .then(renderRank)
+        .catch(() => {
+          body.innerHTML = '<div class="rank-note">순위를 불러오지 못했어요. 잠시 후 🔄를 눌러 주세요.</div>';
+        })
+        .finally(() => { rankLoading = false; });
+    }
+
+    function renderRank(d) {
+      const body = document.getElementById('rankBody');
+      if (!d || !d.ok) {
+        body.innerHTML = '<div class="rank-note">순위를 불러오지 못했어요.</div>';
+        return;
+      }
+      const me = d.me;
+      if (!me || !me.quizzes) {
+        body.innerHTML = `<div class="rank-note">오늘 ${d.participants}명이 참여했어요.<br>퀴즈를 풀면 내 순위가 나타나요! 🥫</div>`;
+        return;
+      }
+      const accText = me.accRank
+        ? `${me.accRank}<small>위 / ${d.accEligible}명</small>`
+        : `-<small> (${d.minQuizzes}문제부터)</small>`;
+      body.innerHTML = `
+        <div class="rank-big">
+          <div class="rank-box"><div class="v">${me.partRank}<small>위 / ${d.participants}명</small></div><div class="k">📝 참여(푼 문제 ${me.quizzes}개)</div></div>
+          <div class="rank-box"><div class="v">${accText}</div><div class="k">🎯 정답률 ${Math.round(me.accuracy * 100)}%</div></div>
+        </div>
+        <div class="rank-note">순위는 나만 볼 수 있어요 🔒</div>
+      `;
     }
 
     function escapeHtml(str) {
